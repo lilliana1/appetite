@@ -1,62 +1,96 @@
-import React, { Component } from 'react';
-import {BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import Container from 'react-bootstrap/Container';
+import React from 'react'
+import {
+	BrowserRouter as Router,
+	Route,
+	// Link,
+	Redirect,
+	Switch,
+	withRouter
+} from 'react-router-dom';
+import Auth from "./utils/Auth";
+import Nav from "./components/Nav";
+import Login from "./components/Login";
+import Register from "./components/Register";
+import {Container} from "./components/Grid";
+import PublicRoute from "./pages/PublicRoute";
+import ProtectedRoute from "./pages/PublicRoute";
 import './App.css';
-import Navbar from 'react-bootstrap/Navbar';
-import Nav from 'react-bootstrap/Nav';
-import Footer from './components/Footer';
-import Home from './pages/Home';
-import About from './pages/About';
-import Contact from './pages/Contact';
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      title: 'Lilliana Ramos',
-      headerLinks: [
-        { title: 'Home', path: '/'},
-        { title: 'About', path: '/About'},
-        { title: 'Contact', path: '/Contact'},
-      ],
-      home: {
-        title: 'Full Stack Web Developer & Information Technology',
-        subTitle: 'Portfolio'
-      },
-      about: {
-        title: 'About Me'
-      },
-      contact: {
-        title: 'Contact Me'
-      }
-    }
-  }
-  render() {
-    return (
-    <Router>
-      <Container className="p-0" fluid={true}>
-        <Navbar className="border-bottom" bg="transparent" expand="lg">
-          <Navbar.Brand>Lilliana Ramos</Navbar.Brand>
-          <Navbar.Toggle className="border-0" aria-controls="navbar-toggle" />
-          <Navbar.Collapse id="navbar-toggle">
-          <Nav className="ml-auto">
-            <Link className="nav-link" to="/">Home</Link>
-            <Link className="nav-link" to="/about">About</Link>
-            <Link className="nav-link" to="/contact">Contact</Link>
+import Home from "./pages/Home";
+import Explore from "./pages/Explore";
+import About from "./pages/About";
 
-          </Nav>
-          </Navbar.Collapse>
-        </Navbar>
-        <Route path="/" exact render={() => <Home title={this.state.home.title} subTitle={this.state.home.subTitle} /> } />
-        <Route path="/about" render={() => <About title={this.state.about.title} /> } />
-        <Route path="/contact" render={() => <Contact title={this.state.contact.title} /> } />
+//I want to add some basic inline styling here, even though we are bringing in styles
+// const listStyle = {
+// 	color: 'cornflowerblue',
+// 	listStyle:'none'
+//   };
+//Now we have all the stuff we need .. let's render some components with the Router
+const AuthExample = () => (
+	<Router>
+		<div>
+      		<Nav className="App-header"/>
+			<Container>
+				{/* <AuthButton/> */}
+				{/* <ul style={listStyle}>
+					<li><Link to="/public">Public Page</Link></li>
+					<li><Link to="/protected">Protected Page</Link></li>
+					<li><Link to="/register">Register a New User</Link></li>
+				</ul> */}
+				<Switch>
+					<Route exact path="/" component={Home}></Route>
+					<Route exact path="/search" component={Home}></Route>
+					<Route exact path="/explore" component={Explore}></Route>
+					<Route exact path="/about" component={About}></Route>
+					<Route exact path="/public" component={PublicRoute}/>
+					<Route exact path="/login" component={Login}/>
+					<Route exact path="/register" component={Register}/>
+					<PrivateRoute path="/protected" component={ProtectedRoute}/>
+					{/* <Route component={NoMatch} /> */}
+				</Switch>
+			</Container>
+		</div>
+	</Router>
+)
 
-        <Footer/>
-      </Container>
-    </Router>
-  );
-  }
-  
-}
 
-export default App;
+//Authbutton component / withRouter is imported from react-router
+const AuthButton = withRouter(({ history }) => (
+	Auth.isAuthenticated ? (
+		<div className="container">
+			<p>Success! You are Logged In!</p>
+			<button className="btn btn-danger" 
+				onClick={() => {
+					Auth.signout(() => history.push('/'))
+				}}>
+				Sign out
+			</button>
+		</div>
+	) : (
+		<p>You are not logged in.</p>
+	)
+))
+
+// This is the private route component this checks for an authorized user here
+const PrivateRoute = ({ component: Component, ...rest }) => (
+	<Route {...rest} render={props => (
+		Auth.isAuthenticated ? (
+			<Component {...props}/>
+		) : (
+			<Redirect to={{
+				pathname: '/login',
+				state: { from: props.location }
+			}}/>
+		)
+	)}/>
+)
+
+
+
+
+
+
+
+
+export default AuthExample
+

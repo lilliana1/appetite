@@ -1,0 +1,15 @@
+/* nav bar complete */
+.navbar {
+  border-radius: 0;
+  background-color: transparent;  
+  font-family: 'Source Serif Pro', serif;
+}
+
+/* nav link are the links ex. search explore city... */
+.nav-link {
+  color: black;
+}
+/* this does not work */
+.navbar-nav a {
+  float: right;
+}
