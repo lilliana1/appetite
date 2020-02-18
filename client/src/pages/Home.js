@@ -6,7 +6,7 @@ function Home() {
         <div>
             <SearchBar/>
             <p className="description">
-            appetite is a real time restaurant finder that will show you the ones that are open at the specific time you are looking
+            Appetite will help to search restaurants that are open at a specific time.
             </p>
         </div>
         
