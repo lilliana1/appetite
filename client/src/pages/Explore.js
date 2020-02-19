@@ -1,11 +1,11 @@
 import React from 'react';
-import SearchBar from '../components/SearchBar';
+import SearchBarExplore from '../components/SearchBarExplore';
 
 
 function Explore() {
     return (
         <div>
-            <SearchBar/>
+            <SearchBarExplore/>
             <p className="description">
             explaining what is explore by city
             </p>
