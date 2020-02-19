@@ -19,6 +19,8 @@ import './App.css';
 import Home from "./pages/Home";
 import Explore from "./pages/Explore";
 import About from "./pages/About";
+import City from "./pages/City";
+import Details from "./pages/Details"
 
 //I want to add some basic inline styling here, even though we are bringing in styles
 // const listStyle = {
@@ -41,6 +43,13 @@ const AuthExample = () => (
 					<Route exact path="/" component={Home}></Route>
 					<Route exact path="/search" component={Home}></Route>
 					<Route exact path="/explore" component={Explore}></Route>
+
+					{/* este route es cuando hayan buscando la ciudad */}
+					<Route exact path="/city" component={City}></Route>
+
+					{/* este route es una vez tengan la ciudad y hayan filter lo q quieren comer pues les da detalles */}
+					<Route exact path="/details" component={Details}></Route>
+
 					<Route exact path="/about" component={About}></Route>
 					<Route exact path="/public" component={PublicRoute}/>
 					<Route exact path="/login" component={Login}/>

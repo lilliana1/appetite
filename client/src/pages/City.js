@@ -1,12 +1,9 @@
 import React from 'react';
+import Checkbox from "../components/Checkbox";
 
 function City() {
     return (
-        <div>
-            <p>
-                CITY WORKS
-            </p>
-        </div>
+        <Checkbox />
         
     );
 
