@@ -44,8 +44,12 @@ class Login extends React.Component {
 		
 		return (
 			<div>
+
+				<br/>
 				<p>You must log in to view the page at {from.pathname}</p>
 				<LoginForm onLogin={this.login} />
+				<br/>
+
 			</div>
 		)
 	}

@@ -1,0 +1,34 @@
+import axios from "axios";
+
+export default {
+
+    getYelp: function(location) {
+      console.log("API");
+      
+        return axios({
+          method: "GET",
+          url: "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=" + location,
+          headers: {
+            Authorization: "Bearer PgJusXn31ypmekPQStCI8iUudCa9UvyHeWELfsnPHZPbxnDiOJSZtV33gDLB7BhRQ6TN3ND6xX0SpzZFPcevOsZm1CinPcCG3bgizU32K2FVhi7XMyO4JeRqCjZHXnYx"
+                    }
+        })
+    }, 
+
+
+  // Gets all books
+  getBooks: function() {
+    return axios.get("/api/books");
+  },
+  // Gets the book with the given id
+  getBook: function(id) {
+    return axios.get("/api/books/" + id);
+  },
+  // Deletes the book with the given id
+  deleteBook: function(id) {
+    return axios.delete("/api/books/" + id);
+  },
+  // Saves a book to the database
+  saveBook: function(bookData) {
+    return axios.post("/api/books", bookData);
+  }
+};

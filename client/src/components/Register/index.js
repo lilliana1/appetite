@@ -30,7 +30,9 @@ class Register extends React.Component {
 	render() {
 		return (
 			<div>
-				<h4>Register a New User</h4>
+
+				<br/>
+				<p>Create account</p>
 				<RegisterForm onRegister={this.register} />
 			</div>
 		)

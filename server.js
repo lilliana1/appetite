@@ -55,7 +55,7 @@ passport.serializeUser(Account.serializeUser());
 passport.deserializeUser(Account.deserializeUser());
 
 /* === Mongoose Connection === */
-mongoose.connect(process.env.MONGODB_URI||'mongodb://localhost/mern_authenticate_me');
+mongoose.connect(process.env.MONGODB_URI||'mongodb://localhost/appetiteDB');
 
 /* === Error Handling === */
 

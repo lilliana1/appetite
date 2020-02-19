@@ -8,6 +8,8 @@
   font-family: "Segoe UI","Segoe",Tahoma,Helvetica,Arial,sans-serif;
 } */
 
+
+
 .container {
   display: flex;
   flex-direction: column;
@@ -50,8 +52,8 @@
 
 .searchbar:focus {
   width: 400px;
-  font-family: "Segoe UI Light", "Segoe UI", "Segoe", Tahoma, Helvetica, Arial,
-    sans-serif;
+  font-family: 'Source Serif Pro', serif;
+
   font-size: 1em;
   font-weight: bold;
   transition: 0.3s;
