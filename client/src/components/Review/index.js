@@ -6,11 +6,11 @@ function Review() {
       <div className="form-group">
         <label for="exampleFormControlSelect1">Rating ⭐️</label>
         <select className="form-control" id="exampleFormControlSelect1">
-          <option><span>⭐️</span></option>
-          <option><span>⭐️⭐️</span></option>
-          <option><span>⭐️⭐️⭐️</span></option>
-          <option><span>⭐️⭐️⭐️⭐️</span></option>
-          <option><span>⭐️⭐️⭐️⭐️⭐️</span></option>
+          <option>⭐️</option>
+          <option>⭐️⭐️</option>
+          <option>⭐️⭐️⭐️</option>
+          <option>⭐️⭐️⭐️⭐️</option>
+          <option>⭐️⭐️⭐️⭐️⭐️</option>
         </select>
       </div>
       <div className="form-group">

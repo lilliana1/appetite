@@ -8,8 +8,8 @@ function RestaurantDetails() {
     return (
         <div className="card">
         <ul className="list-group list-group-flush">
-        <li className="list-group-item">Rating: </li>
-        <li className="list-group-item">Price: </li>
+        <li className="list-group-item"> Yelp's Rating: </li>
+        <li className="list-group-item"> Price: </li>
         </ul>
         </div>
     
