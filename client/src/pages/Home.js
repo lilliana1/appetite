@@ -5,11 +5,13 @@ import API from "../utils/API";
 import "../components/Checkbox";
 
 
+
 class Home extends React.Component {
 
     state = {
         apiData: [],
-        search: ""
+        search: "",
+        categories: []
     }
     
     handleChange = (e) => {
@@ -28,6 +30,19 @@ class Home extends React.Component {
             this.setState({
                 apiData: data.data.businesses
             }) 
+            let allCatSingle = [];
+            this.state.apiData.map( item => {
+                let allCatAll = [];
+                let filterCat = []
+                allCatSingle.push(item.categories.map(cat => cat.title))
+                allCatAll = allCatAll.concat(allCatSingle).flat()
+                filterCat = allCatAll.filter( (cat,i) => allCatAll.indexOf(cat) === i )
+                this.setState({
+                    categories: filterCat
+                })
+            })
+
+
 
         })
         .catch(err => {
@@ -36,7 +51,9 @@ class Home extends React.Component {
         })
     }
 
+
 render(){
+    
     return (
         <div>
             <p className="description">
@@ -48,21 +65,30 @@ render(){
             handleClick={this.handleClick}
             />
             
-            <div>
+            <div class="categories">
             <h3 id="categoriesHeader">Categories</h3>
-        {this.state.apiData.map( item => {
-                return (
-
+            <button type="submit" >click me </button>
+       
                     <div>    
-                        <input className="form-check-input" type="checkbox" value="" id="defaultCheck1" />
-                        <label className="form-check-label" for="defaultCheck1">
-                            {item.categories[0].title}
-                        </label>
+                    <form>
+                        {this.state.categories.map(category => {
+                            
+                            return (
+                            <div>
+                            <input className="form-check-input" type="checkbox" value={category} id="defaultCheck1" />
+                            <label className="form-check-label" for="defaultCheck1">
+                            {category}
+                            </label>
+                            </div>
+
+                        )
+                            })}
+                        </form>
                     {/* <button>{item.categories[0].title}</button> */}
                     {/* <img src={item.image_url} alt="test" /> */}
                     </div>
-                )
-        })}
+                
+
             </div>
         </div>
         

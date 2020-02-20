@@ -49,7 +49,7 @@ render(){
         {this.state.apiData.map( item => {
                 return (
                     <div>                 
-                    <p>{item.name}</p> 
+                    <a>{item.name}</a> 
                     {/* <img src={item.image_url} alt="test" /> */}
                     </div>
                 )
