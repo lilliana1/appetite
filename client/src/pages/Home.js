@@ -1,7 +1,8 @@
 import React from 'react';
 import SearchBar from '../components/SearchBar';
 import API from "../utils/API";
-import "../components/Checkbox/styleCheckbox.css";
+// import "../components/Checkbox/styleCheckbox.css";
+import "../components/Checkbox";
 
 
 class Home extends React.Component {
@@ -41,15 +42,19 @@ render(){
             <p className="description">
             Appetite will help to search restaurants that are open at the specific time of searching.
             </p>
+            <br />
             <SearchBar
             handleChange={this.handleChange}
             handleClick={this.handleClick}
             />
             
             <div>
-            <h3>Categories</h3>
+            <h3 id="categoriesHeader">Categories</h3>
         {this.state.apiData.map( item => {
                 return (
+                    
+
+
                     <div>    
                         <input className="form-check-input" type="checkbox" value="" id="defaultCheck1" />
                         <label className="form-check-label" for="defaultCheck1">
@@ -68,3 +73,4 @@ render(){
 }
 }
 export default Home; 
+
