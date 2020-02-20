@@ -1,9 +1,7 @@
 import React from 'react';
 import SearchBar from '../components/SearchBar';
 import API from "../utils/API";
-// import "../components/Checkbox/styleCheckbox.css";
 import "../components/Checkbox";
-
 
 
 class Home extends React.Component {
@@ -65,12 +63,13 @@ render(){
             handleClick={this.handleClick}
             />
 
-            <div class="categories">
-            <h3 class="categories">Categories</h3>
+            <div className="categories">
+            <h3 className="categories">Categories</h3>
             {/* <button type="submit" >click me </button> */}
 
                     <div>    
-                    <form class="categories">
+                    <form className="categories">
+                        <button id="categoriesSearchButton">Search</button>
                         {this.state.categories.map(category => {
 
                             

@@ -1,6 +1,8 @@
 import React from 'react';
 import SearchBarExplore from '../components/SearchBarExplore';
 import API from "../utils/API";
+import "../components/Checkbox";
+
 
 
 class Explore extends React.Component {
@@ -37,14 +39,12 @@ class Explore extends React.Component {
 render(){
     return (
         <div>
-            
-            <br />
-            <SearchBarExplore
-            handleChange={this.handleChange}
-            handleClick={this.handleClick}
-            />
-            
-            <div>
+        <br />
+        <SearchBarExplore
+        handleChange={this.handleChange}
+        handleClick={this.handleClick}
+        />
+        <div>
             <h3>Restaurants</h3>
         {this.state.apiData.map( item => {
                 return (
@@ -63,19 +63,3 @@ render(){
 }
 }
 export default Explore; 
-
-
-// function Explore() {
-//     return (
-//         <div>
-//             <SearchBarExplore/>
-//             <p className="description">
-//             explaining what is explore by city
-//             </p>
-//         </div>
-
-        
-//     );
-
-// }
-// export default Explore; 

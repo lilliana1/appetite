@@ -1,16 +1,10 @@
 body {
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; */
-  /* background-color: #D03237; */
   font-family: 'Source Serif Pro', serif;
 }
 
 .container {
   display: flex;
-  /* flex-direction: column; */
+  flex-direction: column;
   /* align-items: center; */
   
 }
@@ -20,7 +14,7 @@ body {
 }
 
 .searchbar {
-  /* float: left; */
+  float: left;
   background-color: transparent;
   color: black;
   padding: 6px 10px;
@@ -33,9 +27,9 @@ body {
   font-weight: bold;
   border-bottom: black solid 1px;
   transition: 0.3s;
-  /* position: absolute; */
-  /* left: 50%; */
-  /* top: 50%; */
+  position: absolute;
+  left: 50%;
+  top: 50%;
   height: 100px;
   margin-top: -100px; /* half of you height */
   width: 300px;
@@ -201,4 +195,14 @@ h1{
   transform: rotateX(-90deg);
   -webkit-transform: rotateX(-90deg);
   -moz-transform: rotateX(-90deg);
+}
+
+#categoriesSearchButton {
+  background-color: transparent;
+  border-style: solid;
+  font:red;
+  align-content: center;
+  cursor: pointer;
+
+
 }
