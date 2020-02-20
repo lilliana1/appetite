@@ -52,8 +52,6 @@ render(){
             <h3 id="categoriesHeader">Categories</h3>
         {this.state.apiData.map( item => {
                 return (
-                    
-
 
                     <div>    
                         <input className="form-check-input" type="checkbox" value="" id="defaultCheck1" />
