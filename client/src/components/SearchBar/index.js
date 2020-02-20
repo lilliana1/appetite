@@ -16,7 +16,7 @@ function SearchBar(props) {
         <button type="submit" onClick={props.handleClick}> Click Me..!</button> */}
 {/* new */}
 
-        <div className="back ">
+        <div className="back">
         <div onClick={props.handleClick} type="submit" className="button_base b05_3d_roll">
             <button>Here we go!</button>
             <button>Let's explore</button>
