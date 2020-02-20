@@ -3,7 +3,7 @@ import "./style.css";
 
 function SearchBar(props) {
     return (
-        <div className="container">
+        <div>
         <input
         id="searchBar" 
         className="searchbar" 

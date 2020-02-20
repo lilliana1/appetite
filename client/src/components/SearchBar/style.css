@@ -7,14 +7,13 @@ body {
   /* background-color: #D03237; */
   font-family: 'Source Serif Pro', serif;
 }
-/* 
+
 .container {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  /* flex-direction: column; */
+  /* align-items: center; */
   
-} */
+}
 
 .description {
   margin-top: 20px;

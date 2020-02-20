@@ -64,14 +64,15 @@ render(){
             handleChange={this.handleChange}
             handleClick={this.handleClick}
             />
-            
+
             <div class="categories">
-            <h3 id="categoriesHeader">Categories</h3>
-            <button type="submit" >click me </button>
-       
+            <h3 class="categories">Categories</h3>
+            {/* <button type="submit" >click me </button> */}
+
                     <div>    
-                    <form>
+                    <form class="categories">
                         {this.state.categories.map(category => {
+
                             
                             return (
                             <div>

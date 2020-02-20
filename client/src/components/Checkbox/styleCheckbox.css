@@ -1,5 +1,9 @@
-.form-check {
-    width: 18rem;
-    display:inline-block;
-
+.container {
+    justify-content: left;
 }
+.categories {
+    background-color: red;
+    align-content: left;
+    justify-content: left;
+}
+
