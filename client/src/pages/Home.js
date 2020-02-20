@@ -22,7 +22,7 @@ class Home extends React.Component {
         console.log(this.state.search);
         
 
-        API.getYelp(this.state.search)
+        API.getYelpOpenNow(this.state.search)
         .then(data => {
             console.log(data.data.businesses);
             this.setState({
