@@ -35,7 +35,7 @@ class Nav extends Component {
     return (
       <nav className="navbar navbar-expand-lg mb-2">
         <Link className="navbar-brand" to="/">
-          Appetite
+          Appetite.
         </Link>
         <button
           onClick={this.toggleNav}

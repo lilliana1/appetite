@@ -4,6 +4,9 @@
   background-color: transparent;  
   font-family: 'Source Serif Pro', serif;
 }
+.navbar-brand {
+  color: black;
+}
 
 /* nav link are the links ex. search explore city... */
 .nav-link {
@@ -12,4 +15,5 @@
 /* this does not work */
 .navbar-nav a {
   float: right;
+  align-content: right;
 }

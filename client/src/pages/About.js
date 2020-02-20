@@ -4,7 +4,7 @@ function About() {
     return (
         <div>
             <h1>
-                Appetite
+                Appetite.
             </h1>
 
             <br />
