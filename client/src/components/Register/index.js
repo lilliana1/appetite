@@ -32,7 +32,7 @@ class Register extends React.Component {
 			<div>
 
 				<br/>
-				<p>Create account</p>
+				<h4>Create account and be part of Appetite fam </h4>
 				<RegisterForm onRegister={this.register} />
 			</div>
 		)
