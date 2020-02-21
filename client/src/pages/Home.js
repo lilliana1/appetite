@@ -59,9 +59,13 @@ class Home extends React.Component {
 
     handleChangeCheck = (e) => {
         console.log(e.target.value);
-        API.getYelpCat(this.state.search, e.target.value)
+        let catLower = e.target.value.toLowerCase()
+        API.getYelpCat(this.state.search, catLower)
         .then(data => {
-            console.log(data);
+            this.setState({
+                apiData: data.data.businesses
+            })
+            
         })
         .catch(err => {
             console.log(err);
