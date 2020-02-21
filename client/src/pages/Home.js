@@ -52,6 +52,22 @@ class Home extends React.Component {
             })
     }
 
+    handleCategorySubmit = (e) => {
+        e.preventDefault();
+        console.log(e.target.value);
+    }
+
+    handleChangeCheck = (e) => {
+        console.log(e.target.value);
+        API.getYelpCat(this.state.search, e.target.value)
+        .then(data => {
+            console.log(data);
+        })
+        .catch(err => {
+            console.log(err);
+        })
+    }
+
 
     render() {
 
@@ -87,13 +103,14 @@ class Home extends React.Component {
                         {/* <button type="submit" >click me </button> */}
 
                         <div>
-                            <form className="categories">
-                                <button id="categoriesSearchButton">Search</button>
+                            <form className="categories" onSubmit={this.handleCategorySubmit}>
+                                <button  type="submit" id="categoriesSearchButton">Search</button>
                                 {this.state.categories.map(category => {
 
                                     return (
                                         <div>
-                                            <input className="form-check-input" type="checkbox" value={category} id="defaultCheck1" />
+                                            <input className="form-check-input" type="checkbox" name="restaurantCat" value={category} id="defaultCheck1" 
+                                            onChange={this.handleChangeCheck} />
                                             <label className="form-check-label" for="defaultCheck1">
                                                 {category}
                                             </label>
@@ -120,7 +137,6 @@ class Home extends React.Component {
                                 </tr>
                             </thead>
                             <tbody>
-                                
                                 {this.state.apiData.map(item => {
                                     return (
                                         <tr>
@@ -147,4 +163,3 @@ class Home extends React.Component {
     }
 }
 export default Home;
-
