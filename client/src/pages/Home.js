@@ -120,6 +120,7 @@ class Home extends React.Component {
                                 </tr>
                             </thead>
                             <tbody>
+                                
                                 {this.state.apiData.map(item => {
                                     return (
                                         <tr>
