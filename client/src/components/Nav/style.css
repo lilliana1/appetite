@@ -3,6 +3,7 @@
   border-radius: 0;
   background-color: transparent;  
   font-family: 'Source Serif Pro', serif;
+  border-bottom: .5px solid;
 }
 .navbar-brand {
   color: black;
@@ -11,9 +12,18 @@
 /* nav link are the links ex. search explore city... */
 .nav-link {
   color: black;
+  text-align:right;
+
 }
 /* this does not work */
 .navbar-nav a {
   float: right;
   align-content: right;
+}
+
+.nav ul {
+  list-style: none;
+  width: 100%;
+  background-color: red;
+  text-align:right
 }
