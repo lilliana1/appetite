@@ -12,7 +12,8 @@ class Home extends React.Component {
     state = {
         apiData: [],
         search: "",
-        categories: []
+        categories: [],
+        restSelect: []
     }
 
     handleChange = (e) => {
@@ -62,8 +63,18 @@ class Home extends React.Component {
         let catLower = e.target.value.toLowerCase()
         API.getYelpCat(this.state.search, catLower)
         .then(data => {
+
             this.setState({
                 apiData: data.data.businesses
+            })
+
+            let fullCatArr = this.state.apiData;
+            // console.log(fullCatArr);
+            // fullCatArr.push(data.data.businesses)
+            // console.log(fullCatArr.flat());
+            
+            this.setState({
+                apiData: fullCatArr.flat()
             })
             
         })
@@ -72,9 +83,34 @@ class Home extends React.Component {
         })
     }
 
+    itemDetail = (id) => {
+        console.log(id);
+        let singleDetail = this.state.apiData.filter(item => item.id === id)
+        this.setState({
+            restSelect: singleDetail[0]
+        })
+        console.log(this.state.restSelect.image_url);
+        
+
+    }
+
+    showDetails = () => {
+        console.log("yes");
+        
+        return (
+                <>
+                <img src={this.state.restSelect.image_url} alt={this.state.restSelect.name} />
+                <h2> {this.state.restSelect.name} </h2>
+                <h2> Yelp's Rating: {this.state.restSelect.rating}  </h2>
+                <h2> Yelp's price: {this.state.restSelect.price}  </h2>
+                </>
+        )
+    }
+
 
     render() {
-
+        console.log(this.state.restSelect);
+        
         return (
             <div>
             <br />
@@ -146,7 +182,7 @@ class Home extends React.Component {
                                         <tr>
                                             <th scope="row"><img src={item.image_url} atl={item.name} /></th>
                                             <td>{item.name}</td>
-                                            <td><Link to="/details">i</Link></td>
+                                            <td onClick={() => this.itemDetail(item.id)}>i</td>
                                         </tr>
 
                                     )
@@ -154,10 +190,9 @@ class Home extends React.Component {
 
                             </tbody>
                         </table>
-
-
-
-
+                    </div>
+                    <div className="col-4">
+                    {this.state.restSelect.id === undefined ? "" : this.showDetails()}
                     </div>
                 </div>
             </div>

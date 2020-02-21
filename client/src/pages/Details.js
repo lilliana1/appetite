@@ -11,7 +11,7 @@ function Details() {
             <div className="row">
                 <p><Link to="/">back</Link></p>
 
-                <h1 >Name of place + in +  City </h1>
+                <h1 >Name of place in +  City </h1>
             </div>
             <div className="row">
                 <div className="col-3 imageCol">
