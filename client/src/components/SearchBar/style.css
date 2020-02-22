@@ -4,9 +4,7 @@ body {
 
 .container {
   display: flex;
-  flex-direction: column;
-  /* align-items: center; */
-  
+  flex-direction: column;  
 }
 
 .description {
@@ -18,7 +16,6 @@ body {
   background-color: transparent;
   color: black;
   padding: 6px 10px;
-  /* width: 120px; */
   border: none;
   margin-top: 1px;
   margin-right: 8px;
@@ -41,7 +38,6 @@ body {
   font-family: 'Source Serif Pro', serif;
   font-size: 1em;
   font-weight: bold;
-  /* transition: 0.2s; */
 }
 
 .searchbar:focus {
@@ -50,7 +46,6 @@ body {
   font-size: 1em;
   font-weight: bold;
   transition: 0.3s;
-  /* Stops the input box from inheriting the styling from the inputs on the request form */
   border-bottom: black solid 2px;
   outline: none;
 }
@@ -71,18 +66,33 @@ body {
   font-size: small;
 }
 
-
-/* .buttonContainer{
-	margin-top:100px;
-	text-align:center;
-} */
-
 h1{
-	/* color:rgba(69, 69, 69, 1); */
 	line-height:2em;
 }
-#categoriesHeader{
+/* #categoriesHeader{
   margin-top: 25px;
   float: left;
   color: red;
+  
+} */
+#detailsCol {
+  border: 1px solid gray;
+  position: fixed;
+}
+.paragraphDetails {
+  font-size: medium;
+  padding-left: 10px;
+  margin-top: 10px;
+}
+
+.imageDetails {
+  float: right;
+  padding-right: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+}
+
+#restDetName {
+  font-weight: bold;
 }

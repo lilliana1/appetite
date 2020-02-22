@@ -4,7 +4,7 @@ import API from "../utils/API";
 // import "../components/Checkbox";
 import Button from "../components/Button"
 // import Checkbox from "../components/Checkbox"
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 
 class Home extends React.Component {
@@ -98,12 +98,14 @@ class Home extends React.Component {
         console.log("yes");
         
         return (
-                <>
-                <img src={this.state.restSelect.image_url} alt={this.state.restSelect.name} />
-                <h2> {this.state.restSelect.name} </h2>
-                <h2> Yelp's Rating: {this.state.restSelect.rating}  </h2>
-                <h2> Yelp's price: {this.state.restSelect.price}  </h2>
-                </>
+                <div id="detailsCol">
+                <img className="imageDetails" src={this.state.restSelect.image_url} alt={this.state.restSelect.name} />
+                <p className="paragraphDetails" id="restDetName"> {this.state.restSelect.name} </p>
+                <p className="paragraphDetails"> Yelp's Rating: {this.state.restSelect.rating}  </p>
+                <p className="paragraphDetails"> Yelp's Price: {this.state.restSelect.price}  </p>
+                <p className="paragraphDetails"> Address: {this.state.restSelect.location.display_address}  </p>
+                </div>
+                
         )
     }
 
@@ -118,7 +120,7 @@ class Home extends React.Component {
                 <div className="row">
                     <p className="description col-3">
                         Appetite will help to search restaurants that are open at the specific time of searching.
-            </p>
+                    </p>
                     <br />
                     <div className="col-5">
                         <SearchBar
@@ -144,7 +146,7 @@ class Home extends React.Component {
 
                         <div>
                             <form className="categories" onSubmit={this.handleCategorySubmit}>
-                                <button  type="submit" id="categoriesSearchButton">Search</button>
+                                {/* <button  type="submit" id="categoriesSearchButton">Search</button> */}
                                 {this.state.categories.map(category => {
 
                                     return (
