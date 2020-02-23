@@ -62,25 +62,25 @@ class Home extends React.Component {
         console.log(e.target.value);
         let catLower = e.target.value.toLowerCase()
         API.getYelpCat(this.state.search, catLower)
-        .then(data => {
+            .then(data => {
 
-            this.setState({
-                apiData: data.data.businesses
-            })
+                this.setState({
+                    apiData: data.data.businesses
+                })
 
-            let fullCatArr = this.state.apiData;
-            // console.log(fullCatArr);
-            // fullCatArr.push(data.data.businesses)
-            // console.log(fullCatArr.flat());
-            
-            this.setState({
-                apiData: fullCatArr.flat()
+                let fullCatArr = this.state.apiData;
+                // console.log(fullCatArr);
+                // fullCatArr.push(data.data.businesses)
+                // console.log(fullCatArr.flat());
+
+                this.setState({
+                    apiData: fullCatArr.flat()
+                })
+
             })
-            
-        })
-        .catch(err => {
-            console.log(err);
-        })
+            .catch(err => {
+                console.log(err);
+            })
     }
 
     itemDetail = (id) => {
@@ -90,32 +90,32 @@ class Home extends React.Component {
             restSelect: singleDetail[0]
         })
         console.log(this.state.restSelect.image_url);
-        
+
 
     }
 
     showDetails = () => {
         console.log("yes");
-        
+
         return (
-                <div id="detailsCol">
+            <div id="detailsCol">
                 <img className="imageDetails" src={this.state.restSelect.image_url} alt={this.state.restSelect.name} />
                 <p className="paragraphDetails" id="restDetName"> {this.state.restSelect.name} </p>
                 <p className="paragraphDetails"> Yelp's Rating: {this.state.restSelect.rating}  </p>
                 <p className="paragraphDetails"> Yelp's Price: {this.state.restSelect.price}  </p>
-                <p className="paragraphDetails"> Address: {this.state.restSelect.location.display_address}  </p>
-                </div>
-                
+                <p className="paragraphDetails"> Address: {this.state.restSelect.location.display_address[0] + " " + this.state.restSelect.location.display_address[1]}  </p>
+            </div>
+
         )
     }
 
 
     render() {
         console.log(this.state.restSelect);
-        
+
         return (
             <div>
-            <br />
+                <br />
                 {/* FIRST ROW */}
                 <div className="row">
                     <p className="description col-3">
@@ -130,8 +130,8 @@ class Home extends React.Component {
                     </div>
                     <div className="col-2">
                         <Button
-                        handleChange={this.handleChange}
-                        handleClick={this.handleClick}
+                            handleChange={this.handleChange}
+                            handleClick={this.handleClick}
                         />
                     </div>
 
@@ -151,8 +151,8 @@ class Home extends React.Component {
 
                                     return (
                                         <div>
-                                            <input className="form-check-input" type="checkbox" name="restaurantCat" value={category} id="defaultCheck1" 
-                                            onChange={this.handleChangeCheck} />
+                                            <input className="form-check-input" type="checkbox" name="restaurantCat" value={category} id="defaultCheck1"
+                                                onChange={this.handleChangeCheck} />
                                             <label className="form-check-label" for="defaultCheck1">
                                                 {category}
                                             </label>
@@ -184,7 +184,7 @@ class Home extends React.Component {
                                         <tr>
                                             <th scope="row"><img src={item.image_url} atl={item.name} /></th>
                                             <td>{item.name}</td>
-                                            <td onClick={() => this.itemDetail(item.id)}>i</td>
+                                            <td className="infoPointer" onClick={() => this.itemDetail(item.id)}>i</td>
                                         </tr>
 
                                     )
@@ -194,7 +194,7 @@ class Home extends React.Component {
                         </table>
                     </div>
                     <div className="col-4">
-                    {this.state.restSelect.id === undefined ? "" : this.showDetails()}
+                        {this.state.restSelect.id === undefined ? "" : this.showDetails()}
                     </div>
                 </div>
             </div>
