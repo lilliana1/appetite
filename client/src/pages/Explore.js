@@ -85,8 +85,8 @@ class Explore extends React.Component {
                                     <th scope="col">Restaurant</th>
                                     <th scope="col">Rating</th>
                                     <th scope="col">Price</th>
-                                    {/* <th scope="col">Hours</th> */}
                                     <th scope="col">Location</th>
+                                    <th scope="col">URL</th>
 
                                     {/* <th scope="col">i</th> */}
                                 </tr>
@@ -100,6 +100,7 @@ class Explore extends React.Component {
                                             <td> {item.rating} </td>
                                             <td> {item.price} </td>
                                             <td> {item.location.display_address[0] + " " + item.location.display_address[1]} </td>
+                                            <td><a href={item.url} target="_blank"> Visit </a></td>
                                         </tr>
 
                                     )
