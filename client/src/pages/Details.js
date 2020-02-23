@@ -1,8 +1,4 @@
 import React from 'react';
-import Image from "../components/Image";
-import Map from "../components/Map";
-import Review from "../components/Review";
-import RestaurantDetails from "../components/RestaurantDetails"
 import { Link } from 'react-router-dom';
 
 function Details() {

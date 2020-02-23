@@ -1,10 +1,9 @@
 import React from 'react';
 import SearchBar from '../components/SearchBar';
 import API from "../utils/API";
-// import "../components/Checkbox";
 import Button from "../components/Button"
-// import Checkbox from "../components/Checkbox"
-// import { Link } from 'react-router-dom';
+
+
 
 
 class Home extends React.Component {

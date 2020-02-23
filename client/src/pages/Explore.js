@@ -95,12 +95,12 @@ class Explore extends React.Component {
                                 {this.state.apiData.map(item => {
                                     return (
                                         <tr>
-                                            <th scope="row"><img src={item.image_url} atl={item.name} /></th>
+                                            <th scope="row"><img src={item.image_url} alt={item.name} /></th>
                                             <td>{item.name}</td>
                                             <td> {item.rating} </td>
                                             <td> {item.price} </td>
                                             <td> {item.location.display_address[0] + " " + item.location.display_address[1]} </td>
-                                            <td><a href={item.url} target="_blank"> Visit </a></td>
+                                            <td><a href={item.url} target="_blank" rel="noopener noreferrer"> Visit </a></td>
                                         </tr>
 
                                     )
