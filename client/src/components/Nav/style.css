@@ -1,10 +1,16 @@
 /* nav bar complete */
+body {
+  background-color: #e9ebe8;
+}
 .navbar {
   border-radius: 0;
-  background-color: transparent;  
+  background-color: transparent;
   font-family: 'Source Serif Pro', serif;
-  border-bottom: .5px solid;
 
+
+}
+.jumbotron {
+  background-color: yellow;
 }
 .navbar-brand {
   color: black;
@@ -20,11 +26,6 @@
 
 
 
-}
-/* this does not work */
-.navbar-nav a {
-  float: right;
-  align-content: right;
 }
 
 .nav ul {

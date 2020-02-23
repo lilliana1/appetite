@@ -134,7 +134,7 @@ class Home extends React.Component {
             <div>
                 <br />
                 {/* FIRST ROW */}
-                <div className="row">
+                <div className="row jumbotron">
                     <p className="description col-3">
                         Appetite. will help to search restaurants that are open at the specific time of searching.
                     </p>

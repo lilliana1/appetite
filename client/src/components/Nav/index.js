@@ -50,7 +50,7 @@ class Nav extends Component {
         </button>
         
         <div className={`${this.state.open ? "" : "collapse "}navbar-collapse`} id="navbarNav">
-          <ul className="navbar-nav">
+          <ul className="navbar-nav ml-auto">
           <li className="nav-item">
               <Link
                 // onClick={this.toggleNav}

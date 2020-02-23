@@ -51,7 +51,7 @@ class Explore extends React.Component {
                 <br />
 
                 {/* FIRST ROW */}
-                <div className="row">
+                <div className="row jumbotron">
                     <p className="description col-3">
                         Appetite. will help to explore restaurants near searched area.
             </p>
