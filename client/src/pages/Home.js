@@ -104,6 +104,24 @@ class Home extends React.Component {
                 <p className="paragraphDetails"> Yelp's Rating: {this.state.restSelect.rating}  </p>
                 <p className="paragraphDetails"> Yelp's Price: {this.state.restSelect.price}  </p>
                 <p className="paragraphDetails"> Address: {this.state.restSelect.location.display_address[0] + " " + this.state.restSelect.location.display_address[1]}  </p>
+                {/* <p className="paragraphDetails"> Reviews:  </p> */}
+                <form>
+                        <div className="form-group">
+                            <label for="exampleFormControlSelect1">Rating ⭐️</label>
+                            <select className="form-control" id="exampleFormControlSelect1">
+                                <option>⭐️</option>
+                                <option>⭐️⭐️</option>
+                                <option>⭐️⭐️⭐️</option>
+                                <option>⭐️⭐️⭐️⭐️</option>
+                                <option>⭐️⭐️⭐️⭐️⭐️</option>
+                            </select>
+                        </div>
+                        <div className="form-group">
+                            <label for="exampleFormControlTextarea1">Review</label>
+                            <textarea className="form-control" id="exampleFormControlTextarea1"></textarea>
+                        </div>
+                    </form>
+
             </div>
 
         )
@@ -119,7 +137,7 @@ class Home extends React.Component {
                 {/* FIRST ROW */}
                 <div className="row">
                     <p className="description col-3">
-                        Appetite will help to search restaurants that are open at the specific time of searching.
+                        Appetite. will help to search restaurants that are open at the specific time of searching.
                     </p>
                     <br />
                     <div className="col-5">
@@ -161,9 +179,6 @@ class Home extends React.Component {
                                     )
                                 })}
                             </form>
-
-                            {/* <button>{item.categories[0].title}</button> */}
-                            {/* <img src={item.image_url} alt="test" /> */}
                         </div>
 
 

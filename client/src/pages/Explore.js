@@ -53,7 +53,7 @@ class Explore extends React.Component {
                 {/* FIRST ROW */}
                 <div className="row">
                     <p className="description col-3">
-                        Appetite will help to explore restaurants near searched area.
+                        Appetite. will help to explore restaurants near searched area.
             </p>
                     <br />
                     <div className="col-5">

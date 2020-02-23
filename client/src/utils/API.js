@@ -17,7 +17,7 @@ export default {
     getYelpCat: function(location,categories) {
         return axios({
           method: "GET",
-          url: "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=" + location + "/&categories=" + categories + "/&categories=" + categories ,
+          url: "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=" + location + "/&categories=" + categories,
           headers: {
             Authorization: "Bearer PgJusXn31ypmekPQStCI8iUudCa9UvyHeWELfsnPHZPbxnDiOJSZtV33gDLB7BhRQ6TN3ND6xX0SpzZFPcevOsZm1CinPcCG3bgizU32K2FVhi7XMyO4JeRqCjZHXnYx"
                     }

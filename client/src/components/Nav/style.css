@@ -4,15 +4,21 @@
   background-color: transparent;  
   font-family: 'Source Serif Pro', serif;
   border-bottom: .5px solid;
+
 }
 .navbar-brand {
   color: black;
+  
 }
 
 /* nav link are the links ex. search explore city... */
 .nav-link {
   color: black;
   text-align:right;
+  float: right;
+  align-content: right;
+
+
 
 }
 /* this does not work */
