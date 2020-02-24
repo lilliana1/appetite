@@ -188,7 +188,7 @@ class Home extends React.Component {
                                 <tr>
                                     <th scope="col"></th>
                                     <th scope="col">Restaurant <i class="fas fa-utensils"></i></th>
-                                    <th scope="col">i</th>
+                                    <th scope="col"><i class="fas fa-info"></i></th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -197,7 +197,7 @@ class Home extends React.Component {
                                         <tr>
                                             <th scope="row"><img src={item.image_url} atl={item.name} /></th>
                                             <td>{item.name}</td>
-                                            <td className="infoPointer" onClick={() => this.itemDetail(item.id)}>i</td>
+                                            <td className="infoPointer" onClick={() => this.itemDetail(item.id)}><i class="fas fa-info"></i></td>
                                         </tr>
 
                                     )

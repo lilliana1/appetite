@@ -92,7 +92,7 @@
       margin: 0;
       border: 0;
       font-size: 18px;
-      position: relative;
+      position: inherit;
       top: 50%;
       left: 50%;
       /* margin-top: 150px; */
@@ -192,5 +192,5 @@
 
 .infoPointer {
   cursor: pointer;
-  color: blue;
+  color: #C81912;
 }
