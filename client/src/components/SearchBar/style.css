@@ -7,9 +7,7 @@ body {
   flex-direction: column;  
 }
 
-.description {
-  margin-top: 40px;
-}
+
 
 .searchbar {
   float: left;
@@ -61,10 +59,7 @@ body {
   
 }
 
-.description {
-  font-family: 'Source Serif Pro', serif;
-  font-size: small;
-}
+
 
 h1{
 	line-height:2em;
