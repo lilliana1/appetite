@@ -81,10 +81,10 @@ class Explore extends React.Component {
                                 <tr>
                                     <th scope="col"></th>
                                     <th scope="col">Restaurant <i class="fas fa-utensils"></i></th>
-                                    <th scope="col">Rating</th>
-                                    <th scope="col">Price</th>
+                                    <th scope="col"><i class="fab fa-yelp"></i> Rating</th>
+                                    <th scope="col"><i class="fab fa-yelp"></i> Price</th>
                                     <th scope="col">Location</th>
-                                    <th scope="col">URL</th>
+                                    <th scope="col"><i class="fab fa-yelp"></i> URL</th>
 
                                     {/* <th scope="col">i</th> */}
                                 </tr>

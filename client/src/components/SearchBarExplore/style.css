@@ -22,7 +22,7 @@
 }
 
 .searchbar::placeholder {
-  color: black;
+  color: rgb(94, 85, 85);
   font-family: 'Source Serif Pro', serif;
   font-size: 1em;
   font-weight: bold;

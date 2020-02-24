@@ -62,7 +62,10 @@ h1{
 #detailsCol {
   border: 1px solid gray;
   /* position: fixed; */
-  overflow: scroll;
+  /* overflow: scroll; */
+  position: fixed;
+  top: 0;
+  left: 0;
 
 
 }
