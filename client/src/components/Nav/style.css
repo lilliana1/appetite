@@ -1,6 +1,8 @@
 /* nav bar complete */
 body {
-/* background-image: url(https://images.unsplash.com/photo-1513322709986-150dad5ad2a0?ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=8); */
+/* background-image: url(https://images.unsplash.com/photo-1516796181074-bf453fbfa3e6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjk5NTd9&auto=format&fit=crop&w=1350&q=80); */
+/* background-size: cover; */
+
 }
 .navbar {
   border-radius: 0;
@@ -12,7 +14,10 @@ body {
   height: 100%;
   padding: 7rem 2rem;
   background-color: transparent;
-  background-image: url(https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1780&q=80);
+  background-size: cover;
+  background-position: center;
+  /* background-image: url(https://images.unsplash.com/photo-1571989569149-250bd32f5eb5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1355&q=80); */
+  background-image: url(https://images.unsplash.com/photo-1486419952281-2b1734713e54?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80);
 }
 
 
@@ -37,4 +42,19 @@ body {
 
 .fa-yelp {
   color: #d32223;
+}
+
+.form-control {
+  display: block;
+  width: 35%;
+  height: calc(2.25rem + 2px);
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
