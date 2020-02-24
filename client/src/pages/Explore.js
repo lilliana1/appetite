@@ -86,6 +86,7 @@ class Explore extends React.Component {
                                     <th scope="col">Location</th>
                                     <th scope="col"><i class="fab fa-yelp"></i> URL</th>
 
+
                                     {/* <th scope="col">i</th> */}
                                 </tr>
                             </thead>

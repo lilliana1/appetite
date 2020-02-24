@@ -1,9 +1,11 @@
 const reviewsController = require("../../controllers/reviewsController");
 const router = require("express").Router();
-const review = require("../models/review.js");
+// const review = require("../models/review.js");
+
 
 router.post("/api/review", ({ body }, res) => {
   Review.create(body)
+    .get(reviewsController)
     .then(dbReview => {
       res.json(dbReview);
     })
@@ -12,8 +14,8 @@ router.post("/api/review", ({ body }, res) => {
     });
 });
 
-router.post("/api/review/bulk", ({ body }, res) => {
-  Transaction.insertMany(body)
+router.post("/api/review/restaurant", ({ body }, res) => {
+  Review.insert(body)
     .then(dbReview => {
       res.json(dbReview);
     })
@@ -24,7 +26,6 @@ router.post("/api/review/bulk", ({ body }, res) => {
 
 router.get("/api/review", (req, res) => {
   Review.find({})
-    .sort({ date: -1 })
     .then(dbReview => {
       res.json(dbReview);
     })

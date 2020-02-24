@@ -1,14 +1,14 @@
 import React from "react";
 import "./style.css";
 
-function SearchBarReview(props) {
+function SearchBarExplore(props) {
     return (
         <div className="container">
         <input
         id="searchBar" 
         className="searchbar" 
         type="text" 
-        placeholder="Type city you would like to explore..."
+        placeholder="Type restaurant to leave review..."
         value={props.search}
         onChange={props.handleChange}
         />
@@ -24,4 +24,4 @@ function SearchBarReview(props) {
     );
 }
 
-export default SearchBarReview;
+export default SearchBarExplore;

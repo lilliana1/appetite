@@ -1,8 +1,7 @@
 import React from 'react';
+import API from "../utils/API";
 import Checkbox from "../components/Checkbox";
 import Map from "../components/Map";
-import API from "../utils/API";
-
 
 class City extends React.Component {
 

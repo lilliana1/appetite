@@ -21,6 +21,7 @@ import Explore from "./pages/Explore";
 import About from "./pages/About";
 import City from "./pages/City";
 import Details from "./pages/Details"
+import Review from "./pages/Review"
 
 //I want to add some basic inline styling here, even though we are bringing in styles
 // const listStyle = {
@@ -47,8 +48,8 @@ const AuthExample = () => (
 					{/* este route es cuando hayan buscando la ciudad */}
 					<Route exact path="/city" component={City}></Route>
 
-					{/* este route es una vez tengan la ciudad y hayan filter lo q quieren comer pues les da detalles */}
-					<Route exact path="/details" component={Details}></Route>
+					{/* este route es para que hagan reviews de los restaurantes */}
+					<Route exact path="/review" component={Review}></Route>
 
 					<Route exact path="/about" component={About}></Route>
 					<Route exact path="/public" component={PublicRoute}/>
