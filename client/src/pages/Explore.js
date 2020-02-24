@@ -76,10 +76,11 @@ class Explore extends React.Component {
 
                     <div className="col-12">
                         {/* <RestaurantInfo /> */}
+                        
                         <table align="center" className="table">
                             <thead>
                                 <tr>
-                                    <th scope="col"></th>
+                                    <th scope="col exolorecol"></th>
                                     <th scope="col">Restaurant <i class="fas fa-utensils"></i></th>
                                     <th scope="col"><i class="fab fa-yelp"></i> Rating</th>
                                     <th scope="col"><i class="fab fa-yelp"></i> Price</th>

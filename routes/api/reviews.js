@@ -1,10 +1,11 @@
 const reviewsController = require("../../controllers/reviewsController");
 const router = require("express").Router();
+const db = require("../../models")
 // const review = require("../models/review.js");
 
 
 router.post("/api/review", ({ body }, res) => {
-  Review.create(body)
+  db.Review.create(body)
     .get(reviewsController)
     .then(dbReview => {
       res.json(dbReview);
@@ -15,7 +16,7 @@ router.post("/api/review", ({ body }, res) => {
 });
 
 router.post("/api/review/restaurant", ({ body }, res) => {
-  Review.insert(body)
+  db.Review.insert(body)
     .then(dbReview => {
       res.json(dbReview);
     })
@@ -25,7 +26,7 @@ router.post("/api/review/restaurant", ({ body }, res) => {
 });
 
 router.get("/api/review", (req, res) => {
-  Review.find({})
+  db.Review.find({})
     .then(dbReview => {
       res.json(dbReview);
     })
