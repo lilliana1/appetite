@@ -8,7 +8,7 @@ function SearchBarExplore(props) {
         id="searchBar" 
         className="searchbar" 
         type="text" 
-        placeholder="Type restaurant to leave review..."
+        placeholder="Type location of the restaurant..."
         value={props.search}
         onChange={props.handleChange}
         />

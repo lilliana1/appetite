@@ -44,6 +44,8 @@ export default {
     return axios.get("/api/review")
   },
   saveReview: function(reviewData) {
+    console.log(reviewData);
+    
     return axios.post("/api/review", reviewData);
   }
   // // Gets the book with the given id

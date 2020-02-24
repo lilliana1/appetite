@@ -5,8 +5,8 @@ const Review = new Schema({
     username: String,
     restaurantName: String,
     restaurantId: String,
-    rating: Number,
-    Review: String,
+    rating: Array,
+    review: Array,
 });
 
 
