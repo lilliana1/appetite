@@ -1,10 +1,8 @@
 import React from 'react';
 import SearchBarExplore from '../components/SearchBarExplore';
 import API from "../utils/API";
-// import "../components/Checkbox";
 import Button from "../components/Button"
-// import Checkbox from "../components/Checkbox"
-// import { Link } from 'react-router-dom';
+
 
 
 class Explore extends React.Component {
@@ -51,10 +49,10 @@ class Explore extends React.Component {
                 <br />
 
                 {/* FIRST ROW */}
-                <div className="row jumbotron">
+                <div className="row jumbotron shadow-lg bg-white rounded">
                     <p className="description col-3">
                         Appetite. will help to explore restaurants near searched area.
-            </p>
+                    </p>
                     <br />
                     <div className="col-5">
                         <SearchBarExplore
@@ -82,7 +80,7 @@ class Explore extends React.Component {
                             <thead>
                                 <tr>
                                     <th scope="col"></th>
-                                    <th scope="col">Restaurant</th>
+                                    <th scope="col">Restaurant <i class="fas fa-utensils"></i></th>
                                     <th scope="col">Rating</th>
                                     <th scope="col">Price</th>
                                     <th scope="col">Location</th>

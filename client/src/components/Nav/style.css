@@ -1,17 +1,22 @@
 /* nav bar complete */
 body {
-  background-color: #e9ebe8;
+  background-color: #fff;
 }
+
 .navbar {
   border-radius: 0;
   background-color: transparent;
   font-family: 'Source Serif Pro', serif;
-
-
 }
+
 .jumbotron {
+  height: 100%;
+  padding: 7rem 2rem;
   background-color: transparent;
+  background-image: url(https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1780&q=80);
 }
+
+
 .navbar-brand {
   color: black;
   
@@ -23,9 +28,6 @@ body {
   text-align:right;
   float: right;
   align-content: right;
-
-
-
 }
 
 .nav ul {
@@ -34,14 +36,6 @@ body {
   text-align:right
 }
 
-@media only screen and (max-width: 1043px) {
-  
-  
-  
-}
-@media only screen and (max-width: 990px) {
-  .description col-3 {
-    font-size: 12px;
-  }
-  
+.fa-yelp {
+  color: #d32223;
 }

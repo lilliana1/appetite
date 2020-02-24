@@ -9,7 +9,6 @@
   margin: 0;
 }
 
-
 .searchbar {
     float: left;
     background-color: transparent;
@@ -62,23 +61,12 @@
   
     
   }
-  
- 
-  
-  /* .buttonContainer{
-      margin-top:100px;
-      text-align:center;
-  } */
-  
+
   h1{
       /* color:rgba(69, 69, 69, 1); */
       line-height:2em;
   }
-  #categoriesHeader{
-    margin-top: 25px;
-    float: left;
-    color: red;
-  }
+
   
   /* BUTTON CSS
   ------------------------------------------- */
@@ -87,7 +75,7 @@
       transform-style: preserve-3d;
       -webkit-transform-style: preserve-3d;
   }
-  
+/*   
   @media screen and (max-width: 1260px) {
       .back {
           width: 50%;
@@ -99,7 +87,7 @@
           width: 100%;
       }
   }
-  
+   */
   .button_base {
       margin: 0;
       border: 0;

@@ -100,10 +100,11 @@ class Home extends React.Component {
             <div id="detailsCol">
                 <img className="imageDetails" src={this.state.restSelect.image_url} alt={this.state.restSelect.name} />
                 <p className="paragraphDetails" id="restDetName"> {this.state.restSelect.name} </p>
-                <p className="paragraphDetails"> Yelp's Rating: {this.state.restSelect.rating}  </p>
-                <p className="paragraphDetails"> Yelp's Price: {this.state.restSelect.price}  </p>
+                <p className="paragraphDetails"> <i class="fab fa-yelp"></i> Rating: {this.state.restSelect.rating}  </p>
+                <p className="paragraphDetails"> <i class="fab fa-yelp"></i> Price: {this.state.restSelect.price}  </p>
                 <p className="paragraphDetails"> Address: {this.state.restSelect.location.display_address[0] + " " + this.state.restSelect.location.display_address[1]}  </p>
-                {/* <p className="paragraphDetails"> Reviews:  </p> */}
+                <p className="paragraphDetails"> Reviews:  </p>
+                <p className="paragraphDetails"> username: this places is amazing!  </p>
                 {/* <form>
                         <div className="form-group">
                             <label for="exampleFormControlSelect1">Rating ⭐️</label>
@@ -134,7 +135,7 @@ class Home extends React.Component {
             <div>
                 <br />
                 {/* FIRST ROW */}
-                <div className="row jumbotron">
+                <div className="row jumbotron shadow-lg bg-white rounded">
                     <p className="description col-3">
                         Appetite. will help to search restaurants that are open at the specific time of searching.
                     </p>
@@ -159,11 +160,9 @@ class Home extends React.Component {
                 <div className="row">
                     <div className="col-2 categories">
                         <h3 className="categories">Categories</h3>
-                        {/* <button type="submit" >click me </button> */}
 
                         <div>
                             <form className="categories" onSubmit={this.handleCategorySubmit}>
-                                {/* <button  type="submit" id="categoriesSearchButton">Search</button> */}
                                 {this.state.categories.map(category => {
 
                                     return (
@@ -188,7 +187,7 @@ class Home extends React.Component {
                             <thead>
                                 <tr>
                                     <th scope="col"></th>
-                                    <th scope="col">Restaurant</th>
+                                    <th scope="col">Restaurant <i class="fas fa-utensils"></i></th>
                                     <th scope="col">i</th>
                                 </tr>
                             </thead>
