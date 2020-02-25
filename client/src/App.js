@@ -55,7 +55,7 @@ const AuthExample = () => (
 					<Route exact path="/public" component={PublicRoute}/>
 					<Route exact path="/login" component={Login}/>
 					<Route exact path="/register" component={Register}/>
-					<PrivateRoute path="/protected" component={ProtectedRoute}/>
+					<PrivateRoute path="/protected" component={Review}/>
 					{/* <Route component={NoMatch} /> */}
 				</Switch>
 			</Container>
@@ -67,17 +67,15 @@ const AuthExample = () => (
 //Authbutton component / withRouter is imported from react-router
 const AuthButton = withRouter(({ history }) => (
 	Auth.isAuthenticated ? (
-		<div className="container">
-			<p>Success! You are Logged In!</p>
+		
 			<button className="btn btn-danger" 
 				onClick={() => {
 					Auth.signout(() => history.push('/'))
 				}}>
 				Sign out
 			</button>
-		</div>
 	) : (
-		<p>You are not logged in.</p>
+		""
 	)
 ))
 
@@ -102,5 +100,5 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
 
 
 
-export default AuthExample
+export { AuthExample, AuthButton }
 

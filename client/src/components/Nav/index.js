@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import Auth from "../../utils/Auth";
 import "./style.css";
+import { AuthButton } from "../../App"
 // import Login from "../LoginForm";
 
 class Nav extends Component {
@@ -48,10 +50,10 @@ class Nav extends Component {
         >
           <span className="navbar-toggler-icon" />
         </button>
-        
+
         <div className={`${this.state.open ? "" : "collapse "}navbar-collapse`} id="navbarNav">
           <ul className="navbar-nav ml-auto">
-          <li className="nav-item">
+            <li className="nav-item">
               <Link
                 // onClick={this.toggleNav}
                 className={window.location.pathname === "/" ? "nav-link active" : "nav-link"}
@@ -105,6 +107,7 @@ class Nav extends Component {
                 Register
               </Link>
             </li>
+            <AuthButton/>
             {/* <li className="nav-item">
               <Link
                 onClick={this.toggleNav}

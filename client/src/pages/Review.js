@@ -1,6 +1,7 @@
 import React from 'react';
+import Auth from "../utils/Auth"
 import SearchBarReview from '../components/SearchBarReview';
-import Button from "../components/Button"
+import ButtonReview from "../components/ButtonReview"
 import API from "../utils/API"
 
 class Review extends React.Component {
@@ -124,7 +125,7 @@ class Review extends React.Component {
             <div id="addReviewCol">
                     <div className="form-group">
                         <label for="exampleFormControlSelect1">Rating ⭐️</label>
-                        <select
+                        <select 
                             className="form-control"
                             id="exampleFormControlSelect1"
                             value={this.state.reviewValue}
@@ -150,6 +151,7 @@ class Review extends React.Component {
                         ></textarea>
                     </div>
                     <button 
+                    className="btn-success review"
                     type="submit"
                     onClick={() => this.handleClickReviews(this.state.restSelect.id, this.state.restSelect.name)}
                     >
@@ -212,8 +214,7 @@ class Review extends React.Component {
     viewReviews = (id) => {
         return (
             <div id="viewRevCol">
-                <p className="paragraphDetails" id="restDetName"> {this.state.chosenReviewData.restaurantName} </p>
-                <p className="paragraphDetails"> Reviews:  </p>
+                <p className="paragraphDetails" id="restDetName"> {this.state.chosenReviewData.restaurantName}  Reviews </p>
                 { this.state.chosenReviewData.review.map(item => (
                     <p className="paragraphDetails"> - {item} </p>
                 )) }
@@ -232,7 +233,7 @@ class Review extends React.Component {
                 <br />
 
                 {/* FIRST ROW */}
-                <div className="row jumbotron shadow-lg bg-white rounded">
+                <div className="row review shadow-lg bg-white rounded">
                     <p className="description col-3">
                         Browse and login to share reviews, opinions and restaurant experiences with Appetite.
                     </p>
@@ -244,7 +245,7 @@ class Review extends React.Component {
                         />
                     </div>
                     <div className="col-2">
-                        <Button
+                        <ButtonReview
                             handleClick={this.handleClick}
                         />
                     </div>
@@ -269,7 +270,7 @@ class Review extends React.Component {
                         <table align="center" className="table">
                             <thead>
                                 <tr>
-                                    <th scope="col"> Img</th>
+                                    <th scope="col"></th>
                                     <th scope="col"> Restaurant <i className="fas fa-utensils"></i></th>
                                     <th scope="col"> Appetite. Rating</th>
                                     <th scope="col"> Reviews </th>
@@ -294,6 +295,7 @@ class Review extends React.Component {
                                                 > view
                                                 </button> 
                                             </td>
+                                            {Auth.isAuthenticated ? 
                                             <td> 
                                                 <button  
                                                 type="button"
@@ -302,6 +304,9 @@ class Review extends React.Component {
                                                 > add
                                                 </button> 
                                             </td>
+                                            :
+                                            <td>Please LogIn to add a Review</td>
+                                            }
                                         </tr>
                                     )
                                 })}

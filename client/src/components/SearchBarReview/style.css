@@ -75,11 +75,27 @@ form {
 textarea.form-control {
   height: 7em;
   width: 100%;
-  position: sticky;
+  /* position: sticky; */
+  font-size: smaller;
+
 
 }
 
 .btn:not(:disabled):not(.disabled) {
   cursor: pointer;
   font-size: small;
+}
+
+#viewRevCol {
+/* border: 1px solid; */
+overflow: scroll;
+border-radius: 15px
+}
+#restDetName {
+  text-align: center;
+
+}
+.btn-success .review {
+  border-radius: 5px;
+  float: right;
 }

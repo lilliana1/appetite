@@ -102,9 +102,7 @@ class Home extends React.Component {
                 <p className="paragraphDetails" id="restDetName"> {this.state.restSelect.name} </p>
                 <p className="paragraphDetails"> <i class="fab fa-yelp"></i> Rating: {this.state.restSelect.rating}  </p>
                 <p className="paragraphDetails"> <i class="fab fa-yelp"></i> Price: {this.state.restSelect.price}  </p>
-                <p className="paragraphDetails"> Address: {this.state.restSelect.location.display_address[0] + " " + this.state.restSelect.location.display_address[1]}  </p>
-                <p className="paragraphDetails"> Reviews:  </p>
-                <p className="paragraphDetails"> username: this places is amazing!  </p>
+                <p className="paragraphDetails"> Address: {this.state.restSelect.location.display_address[0] + " " + this.state.restSelect.location.display_address[1]}</p>
             </div>
 
         )
@@ -118,7 +116,7 @@ class Home extends React.Component {
             <div>
                 <br />
                 {/* FIRST ROW */}
-                <div className="row jumbotron shadow-lg bg-white rounded">
+                <div className="row home shadow-lg bg-white rounded">
                     <p className="description col-3">
                         Appetite. will help to search restaurants that are open at the specific time of searching.
                     </p>

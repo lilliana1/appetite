@@ -11,7 +11,7 @@ background-color: whitesmoke;
   font-family: 'Source Serif Pro', serif;
 }
 
-.jumbotron {
+.home {
   height: 100%;
   padding: 7rem 2rem;
   background-color: transparent;
@@ -20,6 +20,27 @@ background-color: whitesmoke;
   background-image: url(https://images.unsplash.com/photo-1571989569149-250bd32f5eb5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1355&q=80);
   /* background-image: url(https://images.unsplash.com/photo-1458644267420-66bc8a5f21e4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1786&q=80); */
 }
+
+.explore {
+  height: 100%;
+  padding: 7rem 2rem;
+  background-color: transparent;
+  background-size: cover;
+  background-position: center;
+  /* background-image: url(https://images.unsplash.com/photo-1571989569149-250bd32f5eb5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1355&q=80); */
+  background-image: url(https://images.unsplash.com/photo-1458644267420-66bc8a5f21e4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1786&q=80);
+}
+
+.review {
+  height: 100%;
+  padding: 7rem 2rem;
+  background-color: transparent;
+  background-size: cover;
+  background-position: center;
+  background-image: url(https://images.unsplash.com/photo-1571989569149-250bd32f5eb5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1355&q=80);
+  /* background-image: url(https://images.unsplash.com/photo-1458644267420-66bc8a5f21e4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1786&q=80); */
+}
+
 
 
 .navbar-brand {

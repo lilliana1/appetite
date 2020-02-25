@@ -1,7 +1,7 @@
 import React from 'react';
 import SearchBarExplore from '../components/SearchBarExplore';
 import API from "../utils/API";
-import Button from "../components/Button"
+import ButtonExplore from "../components/ButtonExplore"
 
 
 
@@ -49,7 +49,7 @@ class Explore extends React.Component {
                 <br />
 
                 {/* FIRST ROW */}
-                <div className="row jumbotron shadow-lg bg-white rounded">
+                <div className="row explore shadow-lg bg-white rounded">
                     <p className="description col-3">
                         Appetite. will help to explore restaurants near searched area.
                     </p>
@@ -61,7 +61,7 @@ class Explore extends React.Component {
                         />
                     </div>
                     <div className="col-2">
-                        <Button
+                        <ButtonExplore
                             handleChange={this.handleChange}
                             handleClick={this.handleClick}
                         />
