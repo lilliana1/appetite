@@ -10,6 +10,7 @@ class Review extends React.Component {
         filtered: [],
         search: "",
         searchRest: "",
+        restSelect: [],
         restaurantName: "",
         restaurantId: "",
         reviewValue: "",
@@ -115,9 +116,7 @@ class Review extends React.Component {
         console.log("yes");
 
         return (
-            <div id="addReviewCol" >
-            <td>
-
+            // <div id="addReviewCol" >
                 <form>
                     <div className="form-group">
                         <label for="exampleFormControlSelect1">Rating ⭐️</label>
@@ -136,10 +135,10 @@ class Review extends React.Component {
                         </select>
                     </div>
                     <div className="form-group">
-                        <label for="exampleFormControlTextarea1">Review</label>
+                        <label for="Textarea">Review</label>
                         <textarea
                             className="form-control"
-                            id="exampleFormControlTextarea1"
+                            id="Textarea"
                             value={this.state.reviewDescription}
                             onChange={this.handleChangeReviews}
                             name="reviewDescription"
@@ -147,23 +146,16 @@ class Review extends React.Component {
                         ></textarea>
                     </div>
                 </form>
-            </td>
-        </div>
+            
+        // </div>
             
 
         )
     }
 
-
-
-
-
-
-
-
-
     render() {
-
+        console.log(this.state.restSelect);
+        
 
 
         return (
@@ -204,80 +196,39 @@ class Review extends React.Component {
                         <table align="center" className="table">
                             <thead>
                                 <tr>
-                                    <th scope="col">Img</th>
-                                    <th scope="col">Restaurant <i className="fas fa-utensils"></i></th>
+                                    <th scope="col"> Img</th>
+                                    <th scope="col"> Restaurant <i className="fas fa-utensils"></i></th>
                                     <th scope="col"> Appetite. Rating</th>
-                                    <th scope="col"> view and add Reviews <i class="far fa-edit"></i></th>
-                                    <th scope="col"></th>
+                                    <th scope="col"> Reviews </th>
+                                    <th scope="col"> Add Review <i className="far fa-edit"></i> </th>
                                 </tr>
                             </thead>
                             <tbody>
                                 {this.state.filtered.map((item, i) => {
                                     return (
                                         <tr key={i}>
-                                            <th scope="row"> {item.name} </th>
-                                            <td> {item.location.display_address[1]} </td>
+                                            <th scope="row" src={item.image_url} alt={item.name}> </th>
+                                            <td> {item.name} </td>
+                                            <td> rating </td>
                                             <td> Food was AMAZING! </td>
                                             <td> 
-                                                <button
+                                                <button 
+                                                className="addReviewPointer"
                                                 onClick={() => this.handleClickReviews(item.id, item.name)}
                                             >Leave Review</button> 
                                             </td>
 
-                                            {/* <div id="addReviewCol col-3" >
-                                                <td>
 
-                                                    <form>
-                                                        <div className="form-group">
-                                                            <label for="exampleFormControlSelect1">Rating ⭐️</label>
-                                                            <select
-                                                                className="form-control"
-                                                                id="exampleFormControlSelect1"
-                                                                value={this.state.reviewValue}
-                                                                onChange={this.handleChangeReviews}
-                                                                name="reviewValue"
-                                                            >
-                                                                <option value="1">⭐️</option>
-                                                                <option value="2">>>⭐️⭐️</option>
-                                                                <option value="3">>⭐️⭐️⭐️</option>
-                                                                <option value="4">>⭐️⭐️⭐️⭐️</option>
-                                                                <option value="5">>⭐️⭐️⭐️⭐️⭐️</option>
-                                                            </select>
-                                                        </div>
-                                                        <div className="form-group">
-                                                            <label for="exampleFormControlTextarea1">Review</label>
-                                                            <textarea
-                                                                className="form-control"
-                                                                id="exampleFormControlTextarea1"
-                                                                value={this.state.reviewDescription}
-                                                                onChange={this.handleChangeReviews}
-                                                                name="reviewDescription"
-
-                                                            ></textarea>
-                                                        </div>
-                                                    </form>
-                                                </td>
-                                            </div> */}
                                         </tr>
 
                                     )
                                 })}
 
-                                <div className="col-4">
-                                    {this.state.restaurantName.id === undefined ? "" : this.showDetails()}
+                                <div>
+                                    {this.state.restSelect.id === undefined ? "" : this.showDetails()}
                                 </div>
-
-
-
-
-
-
                             </tbody>
                         </table>
-
-
-
-
                     </div>
                 </div>
             </div>
