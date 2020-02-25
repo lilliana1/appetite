@@ -94,7 +94,7 @@ class Review extends React.Component {
 
 
 
-        console.log("yes");
+        console.log("AQUI");
 
 
 
@@ -113,10 +113,8 @@ class Review extends React.Component {
     }
 
     showDetails = () => {
-        console.log("yes");
-
         return (
-            // <div id="addReviewCol" >
+            // <div id="addReviewCol">
                 <form>
                     <div className="form-group">
                         <label for="exampleFormControlSelect1">Rating ⭐️</label>
@@ -128,10 +126,10 @@ class Review extends React.Component {
                             name="reviewValue"
                         >
                             <option value="1">⭐️</option>
-                            <option value="2">>>⭐️⭐️</option>
-                            <option value="3">>⭐️⭐️⭐️</option>
-                            <option value="4">>⭐️⭐️⭐️⭐️</option>
-                            <option value="5">>⭐️⭐️⭐️⭐️⭐️</option>
+                            <option value="2">⭐️⭐️</option>
+                            <option value="3">⭐️⭐️⭐️</option>
+                            <option value="4">⭐️⭐️⭐️⭐️</option>
+                            <option value="5">⭐️⭐️⭐️⭐️⭐️</option>
                         </select>
                     </div>
                     <div className="form-group">
@@ -142,22 +140,17 @@ class Review extends React.Component {
                             value={this.state.reviewDescription}
                             onChange={this.handleChangeReviews}
                             name="reviewDescription"
-
                         ></textarea>
                     </div>
                 </form>
-            
-        // </div>
+            // </div>
             
 
         )
     }
 
     render() {
-        console.log(this.state.restSelect);
-        
-
-
+        // console.log(this.state.restSelect);
         return (
             <div>
                 <br />
@@ -171,6 +164,7 @@ class Review extends React.Component {
                     <div className="col-5">
                         <SearchBarReview
                             handleChange={this.handleChange}
+                            
                         />
                     </div>
                     <div className="col-2">
@@ -178,9 +172,7 @@ class Review extends React.Component {
                             handleClick={this.handleClick}
                         />
                     </div>
-
                 </div>
-
 
                 <div className="row">
 
@@ -212,23 +204,22 @@ class Review extends React.Component {
                                             <td> rating </td>
                                             <td> Food was AMAZING! </td>
                                             <td> 
-                                                <button 
-                                                className="addReviewPointer"
-                                                onClick={() => this.handleClickReviews(item.id, item.name)}
-                                            >Leave Review</button> 
+                                                <button  
+                                                type="button"
+                                                className="addReviewPointer btn btn-outline-dark"
+                                                // onClick={() => this.handleClickReviews(item.id, item.name)}
+                                                onClick={() => this.itemDetail(item.id, item.name)}
+                                                > add
+                                                </button> 
                                             </td>
-
-
                                         </tr>
-
                                     )
                                 })}
-
-                                <div>
-                                    {this.state.restSelect.id === undefined ? "" : this.showDetails()}
-                                </div>
                             </tbody>
                         </table>
+                    </div>
+                    <div className="col-3">
+                        {this.state.restSelect.id === undefined ? "" : this.showDetails()}
                     </div>
                 </div>
             </div>
