@@ -12,7 +12,7 @@
 .searchbar {
     float: left;
     background-color: transparent;
-    color: black;
+    color: white;    
     padding: 6px 10px;
     /* width: 120px; */
     border: none;
@@ -31,6 +31,7 @@
     width: 300px;
     margin-left: -200px /* half of you width */
   }
+ 
   
   .searchbar::placeholder {
     color: black;

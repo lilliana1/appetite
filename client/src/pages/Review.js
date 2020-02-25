@@ -305,7 +305,7 @@ class Review extends React.Component {
                                                 </button> 
                                             </td>
                                             :
-                                            <td>Please LogIn to add a Review</td>
+                                            <td>Please <a href="/login">Log In</a> to add Review</td>
                                             }
                                         </tr>
                                     )
