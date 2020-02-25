@@ -14,7 +14,12 @@ class Review extends React.Component {
         restaurantName: "",
         restaurantId: "",
         reviewValue: "",
-        reviewDescription: ""
+        reviewDescription: "",
+        isReviewOpen: false,
+        isViewReviews: false,
+        reviewData:[],
+        chosenReviewData:{},
+        reviewPercentage: []
 
     }
 
@@ -87,35 +92,36 @@ class Review extends React.Component {
 
 
         API.saveReview(reviewObj)
-            .then(data => console.log(data))
+            .then(data => {
+                console.log(data)
+                this.setState({
+                    reviewValue: "",
+                    reviewDescription: "",
+                    isReviewOpen: !this.state.isReviewOpen
+                })
+            })
             .catch(err => console.log(err))
 
-
-
-
-
         console.log("AQUI");
-
-
-
 
     }
     
     itemDetail = (id) => {
-        console.log(id);
         let singleDetail = this.state.apiData.filter(item => item.id === id)
         this.setState({
-            restSelect: singleDetail[0]
+            restSelect: singleDetail[0],
+            isReviewOpen: !this.state.isReviewOpen
         })
-        console.log(this.state.restSelect.image_url);
-
 
     }
 
-    showDetails = () => {
+    addReview = () => {
+        console.log(this.state.restSelect.id);
+        console.log(this.state.restSelect.name);
+
+        
         return (
-            // <div id="addReviewCol">
-                <form>
+            <div id="addReviewCol">
                     <div className="form-group">
                         <label for="exampleFormControlSelect1">Rating ⭐️</label>
                         <select
@@ -125,6 +131,7 @@ class Review extends React.Component {
                             onChange={this.handleChangeReviews}
                             name="reviewValue"
                         >
+                            <option>Pick a Star</option>
                             <option value="1">⭐️</option>
                             <option value="2">⭐️⭐️</option>
                             <option value="3">⭐️⭐️⭐️</option>
@@ -142,12 +149,81 @@ class Review extends React.Component {
                             name="reviewDescription"
                         ></textarea>
                     </div>
-                </form>
-            // </div>
+                    <button 
+                    type="submit"
+                    onClick={() => this.handleClickReviews(this.state.restSelect.id, this.state.restSelect.name)}
+                    >
+                        submit
+                    </button>
+            </div>
             
+
+        ) 
+    }
+
+    componentDidMount() {
+        API.getReviews()
+        .then(data => {
+            console.log(data)
+            this.setState({
+                reviewData: data.data
+            })
+
+            let sum = 0;
+            let arraySum = []
+            for (let i = 0; i < this.state.reviewData.length; i++) {
+            console.log(this.state.reviewData[i].rating);
+                
+            
+            this.state.reviewData[i].rating.forEach(item => {
+                        sum += parseInt(item)
+
+                        })
+                        arraySum.push(sum/this.state.reviewData[i].rating.length.toFixed(2));
+                        sum=0;
+                        
+            }
+            console.log(arraySum);
+            
+            this.setState({
+                reviewPercentage: arraySum
+            })
+
+
+
+
+        })
+        .catch(err => console.log(err))
+    }
+
+
+
+    viewReviewBtn = (id) => {
+        let chosen= this.state.reviewData.filter(item => item.restaurantId === id)
+        console.log(chosen);
+        
+        this.setState({
+            chosenReviewData: chosen[0],
+            isViewReviews: !this.state.isViewReviews
+        })
+
+    }
+
+    viewReviews = (id) => {
+        return (
+            <div id="viewRevCol">
+                <p className="paragraphDetails" id="restDetName"> {this.state.chosenReviewData.restaurantName} </p>
+                <p className="paragraphDetails"> Reviews:  </p>
+                { this.state.chosenReviewData.review.map(item => (
+                    <p className="paragraphDetails"> - {item} </p>
+                )) }
+                
+            </div>
 
         )
     }
+
+
 
     render() {
         // console.log(this.state.restSelect);
@@ -176,7 +252,7 @@ class Review extends React.Component {
 
                 <div className="row">
 
-                    <div className="col-9">
+                    <div className="col-12">
                         <input
                             className="form-control"
                             id="myInput"
@@ -185,6 +261,11 @@ class Review extends React.Component {
                             onChange={this.handleChangeRest} />
                         {/* <RestaurantInfo /> */}
                         <br />
+                    </div>
+                </div>
+
+                <div className="row">
+                        <div className="col-8">
                         <table align="center" className="table">
                             <thead>
                                 <tr>
@@ -197,17 +278,26 @@ class Review extends React.Component {
                             </thead>
                             <tbody>
                                 {this.state.filtered.map((item, i) => {
+                                    console.log(item.image_url);
+                                    
                                     return (
                                         <tr key={i}>
-                                            <th scope="row" src={item.image_url} alt={item.name}> </th>
+                                            <th scope="row"> <img src={item.image_url} alt={item.name}/> </th>
                                             <td> {item.name} </td>
-                                            <td> rating </td>
-                                            <td> Food was AMAZING! </td>
+                                            <td> {this.state.reviewPercentage[i]} </td>
+                                            <td> 
+                                            <button  
+                                                type="button"
+                                                className="addReviewPointer btn btn-outline-dark"
+                                                // onClick={() => this.handleClickReviews(item.id, item.name)}
+                                                onClick={() => this.viewReviewBtn(item.id)}
+                                                > view
+                                                </button> 
+                                            </td>
                                             <td> 
                                                 <button  
                                                 type="button"
                                                 className="addReviewPointer btn btn-outline-dark"
-                                                // onClick={() => this.handleClickReviews(item.id, item.name)}
                                                 onClick={() => this.itemDetail(item.id, item.name)}
                                                 > add
                                                 </button> 
@@ -218,8 +308,11 @@ class Review extends React.Component {
                             </tbody>
                         </table>
                     </div>
-                    <div className="col-3">
-                        {this.state.restSelect.id === undefined ? "" : this.showDetails()}
+                    <div className="col-4">
+                        {/* {this.viewReviews()} */}
+                        {this.state.isReviewOpen ? this.addReview() : ""}
+                        {this.state.isViewReviews ? this.viewReviews(): ""}
+
                     </div>
                 </div>
             </div>

@@ -57,4 +57,29 @@
     color: white;
   }
   
-  
+#addReviewCol {
+margin-top: inherit;
+position: sticky;
+
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+.formReview {
+  width: 65%;
+  /* position: sticky; */
+
+}
+textarea.form-control {
+  height: 7em;
+  width: 100%;
+  position: sticky;
+
+}
+
+.btn:not(:disabled):not(.disabled) {
+  cursor: pointer;
+  font-size: small;
+}
