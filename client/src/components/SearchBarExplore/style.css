@@ -1,3 +1,8 @@
+
+#searchBarExplore::placeholder {
+  color: #25779f;
+
+}
 .searchbar {
   float: left;
   background-color: transparent;

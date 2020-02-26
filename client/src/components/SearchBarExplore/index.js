@@ -5,7 +5,7 @@ function SearchBarReview(props) {
     return (
         <div className="container jumbotronReview">
         <input
-        id="searchBar" 
+        id="searchBarExplore" 
         className="searchbar" 
         type="text" 
         placeholder="Type city you would like to explore..."

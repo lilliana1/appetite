@@ -214,7 +214,7 @@ class Review extends React.Component {
     viewReviews = (id) => {
         return (
             <div id="viewRevCol">
-                <p className="paragraphDetails" id="restDetName"> {this.state.chosenReviewData.restaurantName}  Reviews </p>
+                <p className="paragraphDetails" id="restDetName"> {this.state.chosenReviewData.restaurantName}  Reviews   </p>
                 { this.state.chosenReviewData.review.map(item => (
                     <p className="paragraphDetails"> - {item} </p>
                 )) }
@@ -272,7 +272,7 @@ class Review extends React.Component {
                                 <tr>
                                     <th scope="col"></th>
                                     <th scope="col"> Restaurant <i className="fas fa-utensils"></i></th>
-                                    <th scope="col"> Appetite. Rating</th>
+                                    <th scope="col"> Rating</th>
                                     <th scope="col"> Reviews </th>
                                     <th scope="col"> Add Review <i className="far fa-edit"></i> </th>
                                 </tr>
@@ -285,6 +285,7 @@ class Review extends React.Component {
                                         <tr key={i}>
                                             <th scope="row"> <img src={item.image_url} alt={item.name}/> </th>
                                             <td> {item.name} </td>
+                                            {/*      se supone que muestre el % del restaurante que es      */}
                                             <td> {this.state.reviewPercentage[i]} </td>
                                             <td> 
                                             <button  

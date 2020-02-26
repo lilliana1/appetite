@@ -6,6 +6,13 @@ body {
   display: flex;
   flex-direction: column;  
 }
+#searchBarHome {
+  color: white;
+}
+#searchBarHome::placeholder {
+  color: gold;
+
+}
 
 .searchbar {
   float: left;

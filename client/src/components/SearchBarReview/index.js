@@ -5,7 +5,7 @@ function SearchBarExplore(props) {
     return (
         <div className="container">
         <input
-        id="searchBar" 
+        id="searchBarReview" 
         className="searchbar" 
         type="text" 
         placeholder="Type location of the restaurant..."

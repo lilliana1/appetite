@@ -34,7 +34,7 @@
  
   
   .searchbar::placeholder {
-    color: black;
+    color: white;
     font-family: 'Source Serif Pro', serif;
     font-size: 1em;
     font-weight: bold;
