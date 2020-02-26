@@ -8,10 +8,10 @@ Visit: https://appetite-2020.herokuapp.com/
 Stop wasting hours in a new city when you are searching for a place to eat. Appetite is here to help you make that search way easier by filtering restaurants where you can have new experiences and great food near you!
 
 ## User Story
-As a user, I want to be able to search restaurants that are open and filter them by category. I want to be able to view and add reviews and rating. I should also be able look restaurants that are not open at the time of searching.
+As a user, I want to be able to search restaurants that are open and filter them by category. I want to be able to view and add reviews and rating. I should also be able to look restaurants that are not open at the time of searching.
 
 ## Purpose and Inspiration
-Imagine you just got to a new city and don't know anything about it when it comes to eat! What's the point of searching on an engine and noticing that places are either close or too far away. Appetite is here to make that browsing experience unique. In Appetite you will be able to view reviews and rating of Appetite's users. 
+Imagine you just got to a new city and don't know anything about it when it comes to eat! What's the point of searching on an engine and noticing that places are either close or too far away. Appetite is here to make that browsing experience unique. In Appetite you will be able to view reviews and ratings of Appetite's users. 
 
 
 ## MVC
