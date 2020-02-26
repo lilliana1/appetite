@@ -1,8 +1,23 @@
-# M.E.R.N. Authentication Boilerplate
-Full Stack Project starter with basic components routes and authentication. The project is in MVC format that includes the User model and controller. The first routes in the client are protected by the passport authentication using the local strategy. 
+# Appetite
+Appetite is an real-time restaurant finder application. Is built for searching places to eat that are open at the time you are searching. You will be able to view and explore restaurants, view and post reviews and rating. 
+
+Visit: https://appetite-2020.herokuapp.com/
+
+![alt text](/screenshot.png)
+
+Stop wasting hours in a new city when you are searching for a place to eat. Appetite. is here to help you make that search way easier by filtering restaurants where you can have new experiences and great food near you!
+
+## User Story
+As a user, I want to be able to search restaurants that are open and filter them by category. I want to be able to view and add reviews and rating. I should also be able look restaurants that are not open at the time of searching.
+
+## Business Context
+A consumer will be able to explore restaurant  their fitness goals quicker when they track their workout progress.
+We also give users the ability to create their own user accounts and review that are tied to their user account. This simply being a passport and bcrypt authentication system whereas the shopping cart is a relational database where a user ID is related to a product ID and gathering all products corresponding to a specific user ID gives us their shopping card.
+
 
 ## Purpose and Inspiration
-You can fork and run this to quickly have an MVC project up and running, then simply add the controllers models and components that your project needs. I wanted to have a place to start with no other models than the User model. This is currently at the point where you can:
+Imagine you just got to a new city and don't know anything about it when it comes to eat! What's the point of searching on an engine and noticing that places are either close or too far away. Appetite. is here to make that browsing experience unique. In Appetite. you will be able to view reviews and rating of Appetite's users. 
+
 
 ## MVC
 This project is structured in Full Stack Javascript with Mongoose Models REACT Views and Controllers. The heavy lifting for the authentication is done in src/utils/Auth.js.
@@ -18,18 +33,8 @@ This project is structured in Full Stack Javascript with Mongoose Models REACT V
 + [NODE](https://nodejs.org/en/)
 + [PASSPORT](http://www.passportjs.org/docs/username-password/)
 
-#### Install and run
-Install all the dependencies with Yarn or NPM
-`yarn install` <br>
-Make sure you start Mongod and have mongoDB running..
-`mongod` <br>
-Then start the project
-`yarn start`
+## Author 
+Lilliana Ramos
 
-## Register a New User
-![Register A New User](/client/public/images/Register.png)
-
-## Routes are protected from Users that are not logged in
-![Login an existing User](/client/public/images/ProtectedRoute.png)
 
 
