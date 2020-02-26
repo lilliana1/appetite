@@ -151,7 +151,7 @@ class Review extends React.Component {
                         ></textarea>
                     </div>
                     <button 
-                    className="btn-success review"
+                    className="btn-success reviewbtn"
                     type="submit"
                     onClick={() => this.handleClickReviews(this.state.restSelect.id, this.state.restSelect.name)}
                     >
