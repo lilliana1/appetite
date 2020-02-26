@@ -80,3 +80,15 @@ background-color: whitesmoke;
   border-radius: .25rem;
   transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
+/* .loginform {
+  background-color: red;
+  margin: 20px;
+  align-content: center;
+  text-align: center;
+  align-items: center;
+  width: 50%;
+  justify-content: center;
+  display: inline-block;
+  margin-left: 25%;
+  margin-right:25%;
+} */
