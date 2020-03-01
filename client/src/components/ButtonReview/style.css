@@ -35,7 +35,7 @@
   .searchbar::placeholder {
     color: black;
     font-family: 'Source Serif Pro', serif;
-    font-size: 1em;
+    font-size: large;
     font-weight: bold;
     /* transition: 0.2s; */
   }
@@ -43,7 +43,7 @@
   .searchbar:focus {
     width: 400px;
     font-family: 'Source Serif Pro', serif;
-    font-size: 1em;
+    font-size: large;
     font-weight: bold;
     transition: 0.3s;
     /* Stops the input box from inheriting the styling from the inputs on the request form */
