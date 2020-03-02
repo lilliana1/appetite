@@ -131,6 +131,7 @@ class Home extends React.Component {
                         <Button
                             handleChange={this.handleChange}
                             handleClick={this.handleClick}
+                            
                         />
                     </div>
 
