@@ -1,4 +1,6 @@
 import React from 'react';
+import logo from '../components/Logo'
+import Logo from '../components/Logo';
 
 function About() {
     return (
@@ -24,7 +26,7 @@ function About() {
             <br />
             <h5>API</h5>
             Appetite. use Yelp's amazing API.
-
+            <Logo />
         </div>
         
     );
