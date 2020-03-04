@@ -21,7 +21,8 @@ class Home extends React.Component {
         })
     }
 
-    handleClick = () => {
+    handleClick = (e) => {
+        // e.preventDefault();
         console.log(this.state.search);
 
 
@@ -107,7 +108,9 @@ class Home extends React.Component {
 
         )
     }
+    // nuevo
 
+      // fin de nuevo
 
     render() {
         console.log(this.state.restSelect);
@@ -124,14 +127,11 @@ class Home extends React.Component {
                     <div className="col-5">
                         <SearchBar
                             handleChange={this.handleChange}
-                            handleClick={this.handleClick}
                         />
                     </div>
                     <div className="col-2">
                         <Button
-                            handleChange={this.handleChange}
                             handleClick={this.handleClick}
-                            
                         />
                     </div>
 
