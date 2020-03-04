@@ -199,10 +199,14 @@ class Review extends React.Component {
     }
 
 
-
+    // when press view, this will display the reviews of selected restaurant
+    // fix that when the restaurant selected has none reviews, alert
+    // fix that the review corresponds to the right one
     viewReviewBtn = (id) => {
         let chosen= this.state.reviewData.filter(item => item.restaurantId === id)
         console.log(chosen);
+        console.log("aqui sera?");
+        
         
         this.setState({
             chosenReviewData: chosen[0],
@@ -211,12 +215,13 @@ class Review extends React.Component {
 
     }
 
+    // reviews col that is on the right side when pressed view on review page
     viewReviews = (id) => {
         return (
             <div id="viewRevCol">
-                <p className="paragraphDetails" id="restDetName"> {this.state.chosenReviewData.restaurantName}  Reviews   </p>
+                <p className="paragraphDetails" id="restDetName"> {this.state.chosenReviewData.restaurantName}  Reviews </p>
                 { this.state.chosenReviewData.review.map(item => (
-                    <p className="paragraphDetails"> - {item} </p>
+                    <p className="paragraphDetails">- {item}  </p>
                 )) }
                 
             </div>

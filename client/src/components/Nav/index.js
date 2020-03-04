@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Auth from "../../utils/Auth";
 import "./style.css";
 import { AuthButton } from "../../App"
+import Logo from "../Logo"
 // import Login from "../LoginForm";
 
 class Nav extends Component {
@@ -37,7 +38,7 @@ class Nav extends Component {
     return (
       <nav className="navbar navbar-expand-lg mb-2 navbar-light">
         <Link className="navbar-brand" to="/">
-          Appetite.
+          <Logo />
         </Link>
         <button
           onClick={this.toggleNav}
