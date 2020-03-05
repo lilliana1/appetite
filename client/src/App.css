@@ -15,5 +15,30 @@
 }
 
 
+@media screen and (max-width: 1000px) {
+  
+  .description {
+    color: black;
+  }
 
+  .categories {
+    font-size: small;
+  }
 
+  .home  {
+    background-image: none;   
+  }
+
+  .explore {
+    background-image: none;
+  }
+
+  .review {
+    background-image: none;
+  }
+
+  .back button {
+    display: block;
+  }
+
+}
