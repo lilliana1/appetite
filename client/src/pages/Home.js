@@ -14,6 +14,8 @@ class Home extends React.Component {
         categories: [],
         restSelect: []
     }
+    
+
 
     handleChange = (e) => {
         this.setState({
@@ -120,16 +122,17 @@ class Home extends React.Component {
                 <br />
                 {/* FIRST ROW */}
                 <div className="row home shadow-lg bg-white rounded">
-                    <p className="description col-3">
+                    <p className="description col-md-3">
                         Appetite. will help to search restaurants that are open at the specific time of searching.
                     </p>
                     <br />
-                    <div className="col-5">
+                    <div className="col-md-5">
                         <SearchBar
                             handleChange={this.handleChange}
+
                         />
                     </div>
-                    <div className="col-2">
+                    <div className="col-md-2">
                         <Button
                             handleClick={this.handleClick}
                         />

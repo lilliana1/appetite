@@ -27,7 +27,7 @@ class Login extends React.Component {
 				});
 			}
 		})
-		.catch((err) => {// No beuno, kick them
+		.catch((err) => {// No bueno, kick them
 			console.log('Error logging in.', err);
 		});
 	}

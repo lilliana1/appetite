@@ -57,6 +57,12 @@
     font-size: large;
     color: white;
   }
+  @media screen and (max-width: 1000px) {
+  
+    .description {
+      color: black;
+    }
+  }
   
 #addReviewCol {
 margin-top: inherit;

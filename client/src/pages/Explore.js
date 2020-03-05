@@ -50,7 +50,7 @@ class Explore extends React.Component {
 
                 {/* FIRST ROW */}
                 <div className="row explore shadow-lg bg-white rounded">
-                    <p className="description col-3">
+                    <p className="description col-md-3">
                         Appetite. will help to explore restaurants near searched area.
                     </p>
                     <br />
@@ -80,7 +80,7 @@ class Explore extends React.Component {
                         <table align="center" className="table">
                             <thead>
                                 <tr>
-                                    <th scope="col exolorecol"></th>
+                                    <th scope="col-sm exolorecol"></th>
                                     <th scope="col">Restaurant <i class="fas fa-utensils"></i></th>
                                     <th scope="col"><i class="fab fa-yelp"></i> Rating</th>
                                     <th scope="col"><i class="fab fa-yelp"></i> Price</th>

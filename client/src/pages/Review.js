@@ -82,7 +82,6 @@ class Review extends React.Component {
 
     }
     handleClickReviews = (id, name) => {
-
         const reviewObj = {
             username: "testUser",
             restaurantName: name,
@@ -239,7 +238,7 @@ class Review extends React.Component {
 
                 {/* FIRST ROW */}
                 <div className="row review shadow-lg bg-white rounded">
-                    <p className="description col-3">
+                    <p className="description col-md-3">
                         Browse and login to share reviews, opinions and restaurant experiences with Appetite.
                     </p>
                     <br />
@@ -258,7 +257,7 @@ class Review extends React.Component {
 
                 <div className="row">
 
-                    <div className="col-12">
+                    <div className="col-md-12">
                         <input
                             className="form-control"
                             id="myInput"

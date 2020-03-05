@@ -14,7 +14,9 @@ function SearchBar(props) {
                 placeholder="Type your location..."
                 value={props.search}
                 onChange={props.handleChange}
+                // onKeyPress={props.handleClick}
                 // onSubmit={props.handleClick}
+                // onKeyPress={props.handleKeyPress}
 
                 />
             {/* </form> */}

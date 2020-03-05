@@ -4,3 +4,4 @@ import "./index.css";
 import { AuthExample } from "./App";
 
 ReactDOM.render(<AuthExample />, document.getElementById("root"));
+
