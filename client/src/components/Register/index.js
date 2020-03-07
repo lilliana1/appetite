@@ -30,9 +30,8 @@ class Register extends React.Component {
 	render() {
 		return (
 			<div>
-
 				<br/>
-				<h4>Create account and be part of Appetite fam </h4>
+				<h4 className="createAccount">Create account and be part of Appetite fam </h4>
 				<RegisterForm onRegister={this.register} />
 			</div>
 		)

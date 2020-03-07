@@ -14,7 +14,7 @@ class RegisterForm extends React.Component {
 		
 		return (
 			
-				<form
+				<form  className="createAccountInfo"
 					ref={(elem) => this.form = elem}
 					onSubmit={(e) => {
 						e.preventDefault();
