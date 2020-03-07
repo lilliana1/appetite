@@ -152,7 +152,7 @@ class Home extends React.Component {
 
                                     return (
                                         <div>
-                                            <input className="form-check-input" type="checkbox" name="restaurantCat" value={category} id="defaultCheck1"
+                                            <input className="radio" type="radio" name="restaurantCat" value={category} id="defaultCheck1"
                                                 onChange={this.handleChangeCheck} />
                                             <label className="form-check-label" for="defaultCheck1">
                                                 {category}
