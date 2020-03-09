@@ -10,7 +10,7 @@ class LoginForm extends React.Component {
 		const { onLogin } = this.props;
 		return (
 			
-				<form
+				<form className="loginAccountInfo"
 					ref={(elem) => this.form = elem}
 					onSubmit={(e) => {
 						e.preventDefault();

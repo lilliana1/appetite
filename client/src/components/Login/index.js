@@ -43,7 +43,7 @@ class Login extends React.Component {
 		}
 		
 		return (
-			<div className="loginform">
+			<div className="loginAccount">
 
 				<br/>
 				<h4>Log in </h4>
