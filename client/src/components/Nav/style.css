@@ -1,8 +1,6 @@
 /* nav bar complete */
 body {
-/* background-image: url(https://images.unsplash.com/photo-1516796181074-bf453fbfa3e6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjk5NTd9&auto=format&fit=crop&w=1350&q=80); */
-/* background-size: cover; */
-background-color: whitesmoke;
+  background-color: whitesmoke;
 
 }
 .navbar {
@@ -80,15 +78,3 @@ background-color: whitesmoke;
   border-radius: .25rem;
   transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
-/* .loginform {
-  background-color: red;
-  margin: 20px;
-  align-content: center;
-  text-align: center;
-  align-items: center;
-  width: 50%;
-  justify-content: center;
-  display: inline-block;
-  margin-left: 25%;
-  margin-right:25%;
-} */

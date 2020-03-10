@@ -227,7 +227,19 @@ class Review extends React.Component {
 
         )
     }
-
+    
+    // 
+    // noReviews = () => {
+    //     return (
+    //         <div id="viewRevCol">
+    //             <p className="paragraphDetails" id="restDetName"> {this.state.chosenReviewData.restaurantName}  Reviews </p>
+    //             { this.state.chosenReviewData.review.map(item => (
+    //                 <p className="paragraphDetails">- {item}  </p>
+    //             )) }
+                
+    //         </div>
+    //     )
+    // }
 
 
     render() {
@@ -283,12 +295,13 @@ class Review extends React.Component {
                             </thead>
                             <tbody>
                                 {this.state.filtered.map((item, i) => {
-                                    console.log(item.image_url);
+                                    // console.log(item.image_url);
                                     
                                     return (
                                         <tr key={i}>
                                             <th scope="row"> <img src={item.image_url} alt={item.name}/> </th>
                                             <td> {item.name} </td>
+                                            {/* <td>{item.name.reviewPercentage} </td> */}
                                             {/*      se supone que muestre el % del restaurante que es      */}
                                             <td> {this.state.reviewPercentage[i]} </td>
                                             <td> 

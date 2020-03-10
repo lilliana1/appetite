@@ -40,7 +40,28 @@
   .back button {
     display: block;
   }
+  .home {
+    background-image: none;
+  }
+  .explore {
+    background-image: none;
+  }
+  .review {
+    background-image: none;
 
+  }
+  .review .description {
+  /* color: red; */
+  /* float: left; */
+  /* font-size: smaller; */
+  display: none;
+  }
+  .review .searchbar::placeholder {
+    font-size: smaller;
+  }
+  .home #searchBarHome {
+    display: block;
+  }
 }
 
 

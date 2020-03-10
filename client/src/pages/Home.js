@@ -103,8 +103,8 @@ class Home extends React.Component {
             <div id="detailsCol">
                 <img className="imageDetails" src={this.state.restSelect.image_url} alt={this.state.restSelect.name} />
                 <p className="paragraphDetails" id="restDetName"> {this.state.restSelect.name} </p>
-                <p className="paragraphDetails"> <i class="fab fa-yelp"></i> Rating: {this.state.restSelect.rating}  </p>
-                <p className="paragraphDetails"> <i class="fab fa-yelp"></i> Price: {this.state.restSelect.price}  </p>
+                <p className="paragraphDetails"> <i className="fab fa-yelp"></i> Rating: {this.state.restSelect.rating}  </p>
+                <p className="paragraphDetails"> <i className="fab fa-yelp"></i> Price: {this.state.restSelect.price}  </p>
                 <p className="paragraphDetails"> Address: {this.state.restSelect.location.display_address[0] + " " + this.state.restSelect.location.display_address[1]}</p>
             </div>
 
@@ -155,7 +155,7 @@ class Home extends React.Component {
                                             <input className="radio" type="radio" name="restaurantCat" value={category} id="defaultCheck1"
                                                 onChange={this.handleChangeCheck} />
                                             <label className="form-check-label" for="defaultCheck1">
-                                                {category}
+                                               {category}
                                             </label>
                                         </div>
 
@@ -172,8 +172,8 @@ class Home extends React.Component {
                             <thead>
                                 <tr>
                                     <th scope="col"></th>
-                                    <th scope="col">Restaurant <i class="fas fa-utensils"></i></th>
-                                    <th scope="col"><i class="fas fa-info"></i></th>
+                                    <th scope="col">Restaurant <i className="fas fa-utensils"></i></th>
+                                    <th scope="col"><i className="fas fa-info"></i></th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -182,7 +182,7 @@ class Home extends React.Component {
                                         <tr>
                                             <th scope="row"><img src={item.image_url} atl={item.name} /></th>
                                             <td>{item.name}</td>
-                                            <td className="infoPointer" onClick={() => this.itemDetail(item.id)}><i class="fas fa-info"></i></td>
+                                            <td className="infoPointer" onClick={() => this.itemDetail(item.id)}><i className="fas fa-info"></i></td>
                                         </tr>
 
                                     )
