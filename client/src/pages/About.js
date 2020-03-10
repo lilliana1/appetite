@@ -22,7 +22,7 @@ function About() {
             </p>
 
             <br />
-            <h4>How's behind the creation of Appetite.?</h4>
+            <h4>Who's behind the creation of Appetite.?</h4>
             <p>
             In 2020 Lilliana Ramos created Appetite. with the mission to help foodies search places to eat that are open at the specific time of searching. 
             </p>

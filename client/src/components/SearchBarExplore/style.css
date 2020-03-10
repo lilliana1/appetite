@@ -1,6 +1,7 @@
 
 #searchBarExplore::placeholder {
-  color: #25779f;
+  /* color: #25779f; */
+  color: rgb(207, 6, 46);
   font-size: large;
 
 }

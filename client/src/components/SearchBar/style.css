@@ -9,7 +9,6 @@ body {
 #searchBarHome {
   color: white;
   font-size: large;
-
 }
 #searchBarHome::placeholder {
   color: gold;
